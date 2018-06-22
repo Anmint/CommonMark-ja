@@ -6,10 +6,17 @@ date: '2017-08-01'
 license: '[CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)'
 ...
 
+<!--
 # Introduction
+-->
+# はじめに
 
+<!--
 ## What is Markdown?
+-->
+## Markdownとは?
 
+<!--
 Markdown is a plain text format for writing structured documents,
 based on conventions for indicating formatting in email
 and usenet posts.  It was developed by John Gruber (with
@@ -24,22 +31,44 @@ rendered in formats other than HTML.  Websites like Reddit,
 StackOverflow, and GitHub had millions of people using Markdown.
 And Markdown started to be used beyond the web, to author books,
 articles, slide shows, letters, and lecture notes.
+-->
+Markdownは構造的な文書を記述するためのプレーンテキストフォーマットで、eメールやusenetの投稿のフォーマット方式をベースにしています。
+John Gruber (とAaron Swartzの助け)によって開発され、2004年に[文法書](http://daringfireball.net/projects/markdown/syntax)と、MarkdownをHTMLに変換するPerlスクリプト(`Markdown.pl`)という形で発表されました。
+その後の10年間で、数多くの実装が多くの言語で開発されました。
+あるものは、オリジナルのMarkdownを脚注や表、そのほかの文書構造で拡張しました。
+またあるものは、HTML以外のフォーマットにMarkdown文書を表示させました。
+Reddit、StackOverflow、Githubのようなウェブサイトでは、何百万のユーザがMarkdownを使用しています。
+そしてMarkdownはWebを飛び越え、本や論文、スライドショー、レター、手順書を執筆するのに使われるようになりました。
 
+<!--
 What distinguishes Markdown from many other lightweight markup
 syntaxes, which are often easier to write, is its readability.
 As Gruber writes:
+-->
+Markdownとその他の、より書きやすい、軽量マークアップ言語を峻別しているもの、それは可読性です。
+Gruberによれば、
 
+<!--
 > The overriding design goal for Markdown's formatting syntax is
 > to make it as readable as possible. The idea is that a
 > Markdown-formatted document should be publishable as-is, as
 > plain text, without looking like it's been marked up with tags
 > or formatting instructions.
 > (<http://daringfireball.net/projects/markdown/>)
+-->
 
+> Markdownの文法で何よりも優先するデザイン目標は、できる限り読みやすく作ることです。
+> この考えはMarkdownで書かれた文書はそのまま、プレーンテキストのまま、タグやformatting instructionでマークアップすることなく公開できるようになるべきというものです。
+> (<http://daringfireball.net/projects/markdown/>)
+
+<!--
 The point can be illustrated by comparing a sample of
 [AsciiDoc](http://www.methods.co.nz/asciidoc/) with
 an equivalent sample of Markdown.  Here is a sample of
 AsciiDoc from the AsciiDoc manual:
+-->
+この点はMarkdownと[AsciiDoc](http://www.methods.co.nz/asciidoc/)のサンプルを比較すると表れてきます。
+これがAsciidocのマニュアルから引用したサンプルです。
 
 ```
 1. List item one.
@@ -70,7 +99,11 @@ This paragraph belongs to item two of the outer list.
 --
 ```
 
+<!--
 And here is the equivalent in Markdown:
+-->
+そしてこれがMarkdownでの同一の文書です。
+
 ```
 1.  List item one.
 
@@ -95,10 +128,16 @@ And here is the equivalent in Markdown:
     This paragraph belongs to item two of the outer list.
 ```
 
+<!--
 The AsciiDoc version is, arguably, easier to write. You don't need
 to worry about indentation.  But the Markdown version is much easier
 to read.  The nesting of list items is apparent to the eye in the
 source, not just in the processed document.
+-->
+Asciidoc版は、間違いなく書きやすい方でしょう。
+インデントについて心配する必要もありません。
+しかし、Markdown版の方が読みやすいです。
+リスト項目のネストは出力された文書の中だけでなく、ソースからも明らかです。
 
 ## Why is a spec needed?
 
@@ -9470,4 +9509,3 @@ closers:
 
 After we're done, we remove all delimiters above `stack_bottom` from the
 delimiter stack.
-
