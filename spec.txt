@@ -384,29 +384,49 @@ as a "syntax error," the divergence often isn't discovered right away.
 結果として、ユーザーはあるシステムである形式の出力をしたり (github wikiとか)、それとは異なり他のに出力したり(pandocでdocbook形式に変換したり)する文書を見つけるのにしばしば驚いています。
 さらに悪いことに、Markdownには「シンタックスエラー」として何も検知しないので、こういった実装のばらつきはすぐには見つかりません。
 
+<!--
 ## About this document
+-->
+## この文書について
 
+<!--
 This document attempts to specify Markdown syntax unambiguously.
 It contains many examples with side-by-side Markdown and
 HTML.  These are intended to double as conformance tests.  An
 accompanying script `spec_tests.py` can be used to run the tests
 against any Markdown program:
+-->
+この文書ではMarkdownの文法を明確にすることを企図しています。
+Markdownと並んでHTMLの例を多く収載しました。
+これらは、適合性テストも兼ねています。
+付属の`spec_tests.py`というスクリプトで、Markdownプログラムに対するテストを実行できます。
 
     python test/spec_tests.py --spec spec.txt --program PROGRAM
 
+<!--
 Since this document describes how Markdown is to be parsed into
 an abstract syntax tree, it would have made sense to use an abstract
 representation of the syntax tree instead of HTML.  But HTML is capable
 of representing the structural distinctions we need to make, and the
 choice of HTML for the tests makes it possible to run the tests against
 an implementation without writing an abstract syntax tree renderer.
+-->
+この文書は、Markdownをどのように抽象構文木にパースするかについて書いているため、HTMLの代わりに構文木の抽象表現を用いる方が理解しやすかったでしょう。
+しかしHTMLは、私たちが作りたい構造上の差異を表現する能力がありますし、テスト対象にHTMLを選択することで、抽象構文木のランダラーを書くことなく、実際の実装についてテストできるようになります。
 
+<!--
 This document is generated from a text file, `spec.txt`, written
 in Markdown with a small extension for the side-by-side tests.
 The script `tools/makespec.py` can be used to convert `spec.txt` into
 HTML or CommonMark (which can then be converted into other formats).
+-->
+この文書は`spec.txt`というテキストファイルから生成されていて、side-by-sideテストのための小規模な拡張を含んだMarkdownで書かれています。
+`tools/makespec.py`というスクリプトで、`spec.txt`をHTMLやCommonnMark(そしてそこからさらにほかのフォーマット)に変換できます。
 
+<!--
 In the examples, the `→` character is used to represent tabs.
+-->
+例の中では、`→`はタブを示しています。
 
 # Preliminaries
 
