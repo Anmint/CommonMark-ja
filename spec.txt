@@ -428,63 +428,116 @@ In the examples, the `→` character is used to represent tabs.
 -->
 例の中では、`→`はタブを示しています。
 
+<!--
 # Preliminaries
+-->
+# 準備
 
+<!--
 ## Characters and lines
+-->
+## 文字と行
 
+<!--
 Any sequence of [characters] is a valid CommonMark
 document.
+-->
+[文字]が連続した文字列は正常なCommonMark文書です。
 
+<!--
 A [character](@) is a Unicode code point.  Although some
 code points (for example, combining accents) do not correspond to
 characters in an intuitive sense, all code points count as characters
 for purposes of this spec.
+-->
+[文字](@)はUnicodeのコードポイントです。
+あるコードポイントは(例えば複合アクセント)直感的には文字に対応しないのですが、この仕様ではすべてのコードポイントを文字としてカウントします。
 
+<!--
 This spec does not specify an encoding; it thinks of lines as composed
 of [characters] rather than bytes.  A conforming parser may be limited
 to a certain encoding.
+-->
+この仕様ではエンコード形式を指定しません。バイト列というよりは[文字]の構成物として行を評価します。
+合致するパーサは、特定のエンコードに制限するかもしれません。
 
+<!--
 A [line](@) is a sequence of zero or more [characters]
 other than newline (`U+000A`) or carriage return (`U+000D`),
 followed by a [line ending] or by the end of file.
+-->
+[行](@)はラインフィード(`U+000A`)とキャリッジリターン(`U+000D`)以外の0個以上の[文字]の連なりで、最後に[行終端]かファイルの終端が続きます。
 
+<!--
 A [line ending](@) is a newline (`U+000A`), a carriage return
 (`U+000D`) not followed by a newline, or a carriage return and a
 following newline.
+-->
+[行終端](@)はラインフィード(`U+000A`)と、ラインフィードが後ろにないキャリッジリターン(`U+000D`)、あるいはキャリッジリターンとラインフィード(CR+LF)のことです。
 
+<!--
 A line containing no characters, or a line containing only spaces
 (`U+0020`) or tabs (`U+0009`), is called a [blank line](@).
+-->
+行に文字が無いか、スペース(`U+0020`)かタブ(`U+0009`)しかない場合、[空行](@)と呼びます。
 
+<!--
 The following definitions of character classes will be used in this spec:
+-->
+仕様では、次の文字種についての定義が使われます。
 
+<!--
 A [whitespace character](@) is a space
 (`U+0020`), tab (`U+0009`), newline (`U+000A`), line tabulation (`U+000B`),
 form feed (`U+000C`), or carriage return (`U+000D`).
+-->
+[ホワイトスペース文字](@)とは、スペース(`U+0020`)、タブ(`U+0009`)、ラインフィード(`U+000A`)、垂直タブ(`U+000B`)、フォームフィード(`U+000C`)、キャリッジリターン(`U+000D`)のことを指します。
 
+<!--
 [Whitespace](@) is a sequence of one or more [whitespace
 characters].
+-->
+[ホワイトスペース](@)は、[ホワイトスペース文字]の1つ以上の連続です。
 
+<!--
 A [Unicode whitespace character](@) is
 any code point in the Unicode `Zs` general category, or a tab (`U+0009`),
 carriage return (`U+000D`), newline (`U+000A`), or form feed
 (`U+000C`).
+-->
+[Unicodeホワイトスペース文字](@)とは、Unicodeの`Zs`一般カテゴリにあるコードポイントか、タブ(`U+0009`)、キャリッジリターン(`U+000D`)、ラインフィード(`U+000A`)、フォームフィード(`U+000C`)のことです。
 
+<!--
 [Unicode whitespace](@) is a sequence of one
 or more [Unicode whitespace characters].
+-->
+[Unicodeホワイトスペース](@)とは、[Unicodeホワイトスペース文字]の1つ以上の連続です。
 
+<!--
 A [space](@) is `U+0020`.
+-->
+[スペース](@)は`U+0020`のことです。
 
+<!--
 A [non-whitespace character](@) is any character
 that is not a [whitespace character].
+-->
+[非ホワイトスペース文字](@)とは、[ホワイトスペース文字]ではない文字のことです。
 
+<!--
 An [ASCII punctuation character](@)
 is `!`, `"`, `#`, `$`, `%`, `&`, `'`, `(`, `)`,
 `*`, `+`, `,`, `-`, `.`, `/`, `:`, `;`, `<`, `=`, `>`, `?`, `@`,
 `[`, `\`, `]`, `^`, `_`, `` ` ``, `{`, `|`, `}`, or `~`.
+-->
+[ASCII約物文字](@)とは、`!`、 `"`、 `#`、 `$`、 `%`、 `&`、 `'`、 `(`、 `)`、`*`、 `+`、 `,`、 `-`、 `.`、 `/`、 `:`、 `;`、 `<`、 `=`、 `>`、 `?`、 `@`、`[`、 `\`、 `]`、 `^`、 `_`、 `` ` ``、 `{`、 `|`、 `}`、`~`のことです。
 
+<!--
 A [punctuation character](@) is an [ASCII
 punctuation character] or anything in
 the general Unicode categories  `Pc`, `Pd`, `Pe`, `Pf`, `Pi`, `Po`, or `Ps`.
+-->
+[約物文字](@)とは、[ASCII約物文字]と、Unicode一般カテゴリの`Pc`、 `Pd`、 `Pe`、 `Pf`、 `Pi`、`Po`、`Ps`に属するものです。
 
 ## Tabs
 
