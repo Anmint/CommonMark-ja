@@ -539,17 +539,28 @@ the general Unicode categories  `Pc`, `Pd`, `Pe`, `Pf`, `Pi`, `Po`, or `Ps`.
 -->
 [約物文字](@)とは、[ASCII約物文字]と、Unicode一般カテゴリの`Pc`、 `Pd`、 `Pe`、 `Pf`、 `Pi`、`Po`、`Ps`に属するものです。
 
+<!--
 ## Tabs
+-->
+## タブ
 
+<!--
 Tabs in lines are not expanded to [spaces].  However,
 in contexts where whitespace helps to define block structure,
 tabs behave as if they were replaced by spaces with a tab stop
 of 4 characters.
+-->
+行中のタブは[スペース]には展開されません。
+しかし、ホワイトスペースがブロック構造を定義するようなところでは、タブは4文字分のタブ位置をスペースで置換するように振舞います。
 
+<!--
 Thus, for example, a tab can be used instead of four spaces
 in an indented code block.  (Note, however, that internal
 tabs are passed through as literal tabs, not expanded to
 spaces.)
+-->
+したがって、例えばあるタブを、インデントされたコードブロック中ではスペース4文字の代わりに使えます。
+(注意: しかし文中のタブはそのままタブとして扱われ、スペースには展開されません。)
 
 ```````````````````````````````` example
 →foo→baz→→bim
@@ -574,9 +585,13 @@ spaces.)
 </code></pre>
 ````````````````````````````````
 
+<!--
 In the following example, a continuation paragraph of a list
 item is indented with a tab; this has exactly the same effect
 as indentation with four spaces would:
+-->
+次の例では、リスト項目の続きの段落がタブでインデントされています。
+このときタブは、4つのスペースでインデントされたときと全く同じ働きをします。
 
 ```````````````````````````````` example
   - foo
@@ -605,6 +620,7 @@ as indentation with four spaces would:
 </ul>
 ````````````````````````````````
 
+<!--
 Normally the `>` that begins a block quote may be followed
 optionally by a space, which is not considered part of the
 content.  In the following case `>` is followed by a tab,
@@ -613,6 +629,11 @@ Since one of these spaces is considered part of the
 delimiter, `foo` is considered to be indented six spaces
 inside the block quote context, so we get an indented
 code block starting with two spaces.
+-->
+通常、`>`というブロッククォートの始点は、スペースを後につけられ、これは文章の一部とはみなされません。
+`>`の後にタブが続く場合は、タブが3つのスペースで置換されたように処理されます。
+これらのスペースのうち1つは、区切り文字の一部とみなされるため、`foo`はブロッククォートの中で6つのスペースでインデントされていると考えられます。
+そのため、2つのスペースで始まるインデントされたコードブロックとなるのです。
 
 ```````````````````````````````` example
 >→→foo
@@ -674,11 +695,16 @@ bar
 <hr />
 ````````````````````````````````
 
-
+<!--
 ## Insecure characters
+-->
+## 不正な文字
 
+<!--
 For security reasons, the Unicode character `U+0000` must be replaced
 with the REPLACEMENT CHARACTER (`U+FFFD`).
+-->
+セキュリティ上の理由から、Unicode文字の`U+0000`は置換文字(`U+FFFD`)に置換されなければなりません。
 
 # Blocks and inlines
 
