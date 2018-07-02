@@ -706,20 +706,35 @@ with the REPLACEMENT CHARACTER (`U+FFFD`).
 -->
 セキュリティ上の理由から、Unicode文字の`U+0000`は置換文字(`U+FFFD`)に置換されなければなりません。
 
+<!--
 # Blocks and inlines
+-->
+# ブロックとインライン
 
+<!--
 We can think of a document as a sequence of
 [blocks](@)---structural elements like paragraphs, block
 quotations, lists, headings, rules, and code blocks.  Some blocks (like
 block quotes and list items) contain other blocks; others (like
 headings and paragraphs) contain [inline](@) content---text,
 links, emphasized text, images, code spans, and so on.
+-->
+ドキュメントは[ブロック](@)の連続と考えることができます—段落や引用、リスト、見出し、rules、コードブロックといったものです。
+いくつかの(ブロッククォートやリスト項目など)ブロックは他のブロックを内包しています。
+その他の(見出しや段落)ブロックは[インライン](@)コンテンツを含んでいます—テキスト、リンク、強調されたテキスト、画像、コードスパンなどです。
 
+<!--
 ## Precedence
+-->
+## 順位
 
+<!--
 Indicators of block structure always take precedence over indicators
 of inline structure.  So, for example, the following is a list with
 two items, not a list with one item containing a code span:
+-->
+ブロック構造のインジケーターは、インライン構造のインジケーターより常に優先します。
+つまり、例として次のリストは2つの項目を持ち、コードスパンを含んだ一つの項目を持つリストではありません。
 
 ```````````````````````````````` example
 - `one
@@ -731,7 +746,7 @@ two items, not a list with one item containing a code span:
 </ul>
 ````````````````````````````````
 
-
+<!--
 This means that parsing can proceed in two steps:  first, the block
 structure of the document can be discerned; second, text lines inside
 paragraphs, headings, and other block constructs can be parsed for inline
@@ -740,13 +755,26 @@ definitions that will be available only at the end of the first
 step.  Note that the first step requires processing lines in sequence,
 but the second can be parallelized, since the inline parsing of
 one block element does not affect the inline parsing of any other.
+-->
+これはパースが2つのステップで行われていることを意味します。
+最初は文書中のブロック構造を識別し、次に段落や見出し、その他のブロック構造中の行をインライン構造にパースします。
+2番目のステップでは、最初のステップの終わりでのみ利用可能になる、リンクの参照定義についての情報が必要になります。
+気をつけておきたいのは、最初のステップでは行をシーケンシャルに処理する必要があるのに対し、2番目のステップでは、並列化できることです。
+これは、あるブロック中のインラインパースは、その他のインラインパースに影響を及ぼさないためです。
 
+<!--
 ## Container blocks and leaf blocks
+-->
+## コンテナブロックとリーフブロック
 
+<!--
 We can divide blocks into two types:
 [container block](@)s,
 which can contain other blocks, and [leaf block](@)s,
 which cannot.
+-->
+ブロックは2種類に分類されます。
+[コンテナブロック](@)は他のブロックを包含することができますが、[リーフブロック](@)ではできません。
 
 # Leaf blocks
 
