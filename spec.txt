@@ -765,7 +765,7 @@ one block element does not affect the inline parsing of any other.
 <!--
 ## Container blocks and leaf blocks
 -->
-## コンテナブロックとリーフブロック
+## コンテナブロックと葉ブロック
 
 <!--
 We can divide blocks into two types:
@@ -774,19 +774,31 @@ which can contain other blocks, and [leaf block](@)s,
 which cannot.
 -->
 ブロックは2種類に分類されます。
-[コンテナブロック](@)は他のブロックを包含することができますが、[リーフブロック](@)ではできません。
+[コンテナブロック](@)は他のブロックを包含することができますが、[葉ブロック](@)ではできません。
 
+<!--
 # Leaf blocks
+-->
+# 葉ブロック
 
+<!--  
 This section describes the different kinds of leaf block that make up a
 Markdown document.
+-->
+この章ではMarkdown文書を形作る異なる種類の葉ブロックについて示します。
 
+<!--
 ## Thematic breaks
+-->
+## 区切り線
 
+<!--
 A line consisting of 0-3 spaces of indentation, followed by a sequence
 of three or more matching `-`, `_`, or `*` characters, each followed
 optionally by any number of spaces or tabs, forms a
 [thematic break](@).
+-->
+0-3個のスペースでできたインデントに、3つ以上の`-`、`_`または`*`の文字の連続があると、その間にどれだけスペースやタブが入っていても、[区切り線](@)を形成します。
 
 ```````````````````````````````` example
 ***
@@ -798,8 +810,10 @@ ___
 <hr />
 ````````````````````````````````
 
-
+<!--
 Wrong characters:
+-->
+間違った文字の場合はこうなります。
 
 ```````````````````````````````` example
 +++
@@ -814,8 +828,10 @@ Wrong characters:
 <p>===</p>
 ````````````````````````````````
 
-
+<!--
 Not enough characters:
+-->
+文字数が足りない場合は、
 
 ```````````````````````````````` example
 --
@@ -827,8 +843,10 @@ __
 __</p>
 ````````````````````````````````
 
-
+<!--
 One to three spaces indent are allowed:
+-->
+1から3個のスペースによるインデントは許容されます。
 
 ```````````````````````````````` example
  ***
@@ -840,8 +858,10 @@ One to three spaces indent are allowed:
 <hr />
 ````````````````````````````````
 
-
+<!--
 Four spaces is too many:
+-->
+スペース4つは多すぎます。
 
 ```````````````````````````````` example
     ***
@@ -859,8 +879,10 @@ Foo
 ***</p>
 ````````````````````````````````
 
-
+<!--
 More than three characters may be used:
+-->
+3文字以上の文字数でも使えます。
 
 ```````````````````````````````` example
 _____________________________________
@@ -868,8 +890,10 @@ _____________________________________
 <hr />
 ````````````````````````````````
 
-
+<!--
 Spaces are allowed between the characters:
+-->
+スペースは文字の間に入っていてもいいです。
 
 ```````````````````````````````` example
  - - -
@@ -891,8 +915,10 @@ Spaces are allowed between the characters:
 <hr />
 ````````````````````````````````
 
-
+<!--
 Spaces are allowed at the end:
+-->
+行末のスペースも許容されます。
 
 ```````````````````````````````` example
 - - - -    
@@ -900,8 +926,10 @@ Spaces are allowed at the end:
 <hr />
 ````````````````````````````````
 
-
+<!--
 However, no other characters may occur in the line:
+-->
+しかし、行中に他の文字を入れてはいけません。
 
 ```````````````````````````````` example
 _ _ _ _ a
@@ -915,9 +943,12 @@ a------
 <p>---a---</p>
 ````````````````````````````````
 
-
+<!--
 It is required that all of the [non-whitespace characters] be the same.
 So, this is not a thematic break:
+-->
+全ての[非ホワイトスペース文字]は同じでなければなりません。
+したがって、次の例は区切り線にはなりません。
 
 ```````````````````````````````` example
  *-*
@@ -925,8 +956,10 @@ So, this is not a thematic break:
 <p><em>-</em></p>
 ````````````````````````````````
 
-
+<!--
 Thematic breaks do not need blank lines before or after:
+-->
+区切り線の前後には空行は要りません。
 
 ```````````````````````````````` example
 - foo
@@ -942,8 +975,10 @@ Thematic breaks do not need blank lines before or after:
 </ul>
 ````````````````````````````````
 
-
+<!--
 Thematic breaks can interrupt a paragraph:
+-->
+区切り線は段落を分割します。
 
 ```````````````````````````````` example
 Foo
@@ -955,12 +990,15 @@ bar
 <p>bar</p>
 ````````````````````````````````
 
-
+<!--
 If a line of dashes that meets the above conditions for being a
 thematic break could also be interpreted as the underline of a [setext
 heading], the interpretation as a
 [setext heading] takes precedence. Thus, for example,
 this is a setext heading, not a paragraph followed by a thematic break:
+-->
+ダッシュの行が、[setext見出し]のように解釈できるような場合は、[setext見出し]として解釈されます。
+したがって、下の例はsetext見出しとなり、区切り線がある単なる段落ではなくなるのです。
 
 ```````````````````````````````` example
 Foo
@@ -971,9 +1009,11 @@ bar
 <p>bar</p>
 ````````````````````````````````
 
-
+<!--
 When both a thematic break and a list item are possible
 interpretations of a line, the thematic break takes precedence:
+-->
+区切り線とリスト項目のどちらにも解釈できる場合は、区切り線が優先されます。
 
 ```````````````````````````````` example
 * Foo
@@ -989,8 +1029,10 @@ interpretations of a line, the thematic break takes precedence:
 </ul>
 ````````````````````````````````
 
-
+<!--
 If you want a thematic break in a list item, use a different bullet:
+-->
+リスト項目に区切り線を入れたい場合は、違う種類の行頭文字を使います。
 
 ```````````````````````````````` example
 - Foo
