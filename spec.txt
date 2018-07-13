@@ -1046,9 +1046,12 @@ If you want a thematic break in a list item, use a different bullet:
 </ul>
 ````````````````````````````````
 
-
+<!--
 ## ATX headings
+-->
+## ATX見出し
 
+<!--
 An [ATX heading](@)
 consists of a string of characters, parsed as inline content, between an
 opening sequence of 1--6 unescaped `#` characters and an optional
@@ -1060,8 +1063,18 @@ preceded by a [space] and may be followed by spaces only.  The opening
 heading are stripped of leading and trailing spaces before being parsed
 as inline content.  The heading level is equal to the number of `#`
 characters in the opening sequence.
+-->
+[ATX見出し](@)とは、エスケープされていない1-6個の`#`と自由に何個でも付け加えられる`#`にはさまれた文字列のことで、インラインコンテンツとしてパースされます。
+開始文字列の`#`の後には[スペース]か行の終わりが続かなければなりません。
+オプションでつけられる末尾の`#`は、必ず[スペース]の後から始まる必要があります。
+開始文字列の`#`は、0-3個のスペースでインデントしても構いません。
+行の初めと最後にあるスペースは、インラインコンテンツとしてパースする前に取り除かれます。
+見出しレベルは、開始文字列の`#`の数に等しいです。
 
+<!--
 Simple headings:
+-->
+シンプルな見出しを下に示します。
 
 ```````````````````````````````` example
 # foo
@@ -1079,8 +1092,10 @@ Simple headings:
 <h6>foo</h6>
 ````````````````````````````````
 
-
+<!--
 More than six `#` characters is not a heading:
+-->
+6つを超える`#`は見出しとはされません。
 
 ```````````````````````````````` example
 ####### foo
@@ -1088,7 +1103,7 @@ More than six `#` characters is not a heading:
 <p>####### foo</p>
 ````````````````````````````````
 
-
+<!--
 At least one space is required between the `#` characters and the
 heading's contents, unless the heading is empty.  Note that many
 implementations currently do not require the space.  However, the
@@ -1096,6 +1111,10 @@ space was required by the
 [original ATX implementation](http://www.aaronsw.com/2002/atx/atx.py),
 and it helps prevent things like the following from being parsed as
 headings:
+-->
+`#`と見出しの内容の間には最低でも1つ以上のスペースを入れるか、見出しが空である必要があります。
+多くの実装はスペースを必須とはしていないことに留意してください。
+ただし、スペースは[元々のATX仕様](http://www.aaronsw.com/2002/atx/atx.py)では必須であり、下の例のようなものを見出しとしてしまうことを防ぎます。
 
 ```````````````````````````````` example
 #5 bolt
@@ -1106,8 +1125,10 @@ headings:
 <p>#hashtag</p>
 ````````````````````````````````
 
-
+<!--
 This is not a heading, because the first `#` is escaped:
+-->
+下の例は`#`がエスケープされているので、見出しにはなりません。
 
 ```````````````````````````````` example
 \## foo
@@ -1115,8 +1136,10 @@ This is not a heading, because the first `#` is escaped:
 <p>## foo</p>
 ````````````````````````````````
 
-
+<!--
 Contents are parsed as inlines:
+-->
+見出しの内容はインラインとしてパースされます。
 
 ```````````````````````````````` example
 # foo *bar* \*baz\*
@@ -1124,8 +1147,10 @@ Contents are parsed as inlines:
 <h1>foo <em>bar</em> *baz*</h1>
 ````````````````````````````````
 
-
+<!--
 Leading and trailing blanks are ignored in parsing inline content:
+-->
+インラインコンテンツをパースするときには前後の空白は無視されます。
 
 ```````````````````````````````` example
 #                  foo                     
@@ -1133,8 +1158,10 @@ Leading and trailing blanks are ignored in parsing inline content:
 <h1>foo</h1>
 ````````````````````````````````
 
-
+<!--
 One to three spaces indentation are allowed:
+-->
+1-3個のスペースでインデントすることができます。
 
 ```````````````````````````````` example
  ### foo
@@ -1146,8 +1173,10 @@ One to three spaces indentation are allowed:
 <h1>foo</h1>
 ````````````````````````````````
 
-
+<!--
 Four spaces are too much:
+-->
+スペース4つは多すぎです。
 
 ```````````````````````````````` example
     # foo
@@ -1165,8 +1194,10 @@ foo
 # bar</p>
 ````````````````````````````````
 
-
+<!--
 A closing sequence of `#` characters is optional:
+-->
+`#`を見出しの終わりに自由につけられます。
 
 ```````````````````````````````` example
 ## foo ##
@@ -1176,8 +1207,10 @@ A closing sequence of `#` characters is optional:
 <h3>bar</h3>
 ````````````````````````````````
 
-
+<!--
 It need not be the same length as the opening sequence:
+-->
+開始文字列と同じ文字数でなければいけないわけではありません。
 
 ```````````````````````````````` example
 # foo ##################################
@@ -1187,8 +1220,10 @@ It need not be the same length as the opening sequence:
 <h5>foo</h5>
 ````````````````````````````````
 
-
+<!--
 Spaces are allowed after the closing sequence:
+-->
+終わりの`#`の後にスペースを入れても構いません。
 
 ```````````````````````````````` example
 ### foo ###     
@@ -1196,10 +1231,12 @@ Spaces are allowed after the closing sequence:
 <h3>foo</h3>
 ````````````````````````````````
 
-
+<!--
 A sequence of `#` characters with anything but [spaces] following it
 is not a closing sequence, but counts as part of the contents of the
 heading:
+-->
+終わりの`#`の後に[スペース]以外の文字が来ると、そこまですべて見出しの内容として扱われます。
 
 ```````````````````````````````` example
 ### foo ### b
@@ -1207,8 +1244,10 @@ heading:
 <h3>foo ### b</h3>
 ````````````````````````````````
 
-
+<!--
 The closing sequence must be preceded by a space:
+-->
+終わりの`#`の前にはスペースがなければなりません。
 
 ```````````````````````````````` example
 # foo#
@@ -1216,9 +1255,11 @@ The closing sequence must be preceded by a space:
 <h1>foo#</h1>
 ````````````````````````````````
 
-
+<!--
 Backslash-escaped `#` characters do not count as part
 of the closing sequence:
+-->
+バックスラッシュでエスケープされた`#`は終わりの`#`とは扱われません。
 
 ```````````````````````````````` example
 ### foo \###
@@ -1230,9 +1271,11 @@ of the closing sequence:
 <h1>foo #</h1>
 ````````````````````````````````
 
-
+<!--
 ATX headings need not be separated from surrounding content by blank
 lines, and they can interrupt paragraphs:
+-->
+ATX見出しは前後を空行で囲う必要はなく、段落を分割します。
 
 ```````````````````````````````` example
 ****
@@ -1255,8 +1298,10 @@ Bar foo
 <p>Bar foo</p>
 ````````````````````````````````
 
-
+<!--
 ATX headings can be empty:
+-->
+ATX見出しは内容がなくてもいいです。
 
 ```````````````````````````````` example
 ## 
