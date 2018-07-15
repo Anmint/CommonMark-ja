@@ -1797,9 +1797,12 @@ bar
 baz</p>
 ````````````````````````````````
 
-
+<!--
 ## Indented code blocks
+-->
+## インデントされたコードブロック
 
+<!--
 An [indented code block](@) is composed of one or more
 [indented chunks] separated by blank lines.
 An [indented chunk](@) is a sequence of non-blank lines,
@@ -1807,11 +1810,20 @@ each indented four or more spaces. The contents of the code block are
 the literal contents of the lines, including trailing
 [line endings], minus four spaces of indentation.
 An indented code block has no [info string].
+-->
+[インデントされたコードブロック](@)は空行で挟まれた、1行以上の[インデントされた文章]により成ります。
+[インデントされた文章](@)は4つ以上のスペースでそれぞれインデントされた空行以外の文字列のことです。
+コードブロックの内容は行中の文字列であり、これは[行終端]を含み、インデントのためのスペース4つを除いたものです。
+インデントされたコードブロックは[付加情報]を持ちません。
 
+<!--
 An indented code block cannot interrupt a paragraph, so there must be
 a blank line between a paragraph and a following indented code block.
 (A blank line is not needed, however, between a code block and a following
 paragraph.)
+-->
+インデントされたコードブロックは段落を分割しないので、段落とそれに続くコードブロックの間には空行が必要です。
+(コードブロックとそれに続く段落の間には空行は必要ありません。)
 
 ```````````````````````````````` example
     a simple
@@ -1822,10 +1834,12 @@ paragraph.)
 </code></pre>
 ````````````````````````````````
 
-
+<!--
 If there is any ambiguity between an interpretation of indentation
 as a code block and as indicating that material belongs to a [list
 item][list items], the list item interpretation takes precedence:
+-->
+コードブロックなのか、[リスト項目]に属するものなのか、インデントの解釈に曖昧さが残る場合は、リスト項目の解釈が優先されます。
 
 ```````````````````````````````` example
   - foo
@@ -1857,9 +1871,11 @@ item][list items], the list item interpretation takes precedence:
 ````````````````````````````````
 
 
-
+<!--
 The contents of a code block are literal text, and do not get parsed
 as Markdown:
+-->
+コードブロックの内容は単なるテキストで、Markdownとしてパースはされません。
 
 ```````````````````````````````` example
     <a/>
@@ -1874,8 +1890,10 @@ as Markdown:
 </code></pre>
 ````````````````````````````````
 
-
+<!--
 Here we have three chunks separated by blank lines:
+-->
+これは空行で挟まれた3つの文章になります。
 
 ```````````````````````````````` example
     chunk1
@@ -1896,9 +1914,11 @@ chunk3
 </code></pre>
 ````````````````````````````````
 
-
+<!--
 Any initial spaces beyond four will be included in the content, even
 in interior blank lines:
+-->
+4個を超えるはじめのスペースは、たとえ空行であってもコードブロックの内容となります。
 
 ```````````````````````````````` example
     chunk1
@@ -1911,9 +1931,12 @@ in interior blank lines:
 </code></pre>
 ````````````````````````````````
 
-
+<!--
 An indented code block cannot interrupt a paragraph.  (This
 allows hanging indents and the like.)
+-->
+インデントされたコードブロックは段落を分割しません。
+（これは文章中のぶら下げインデントとなります。）
 
 ```````````````````````````````` example
 Foo
@@ -1924,10 +1947,13 @@ Foo
 bar</p>
 ````````````````````````````````
 
-
+<!--
 However, any non-blank line with fewer than four leading spaces ends
 the code block immediately.  So a paragraph may occur immediately
 after indented code:
+-->
+しかし、4つ未満のスペースから始まる非空行はコードブロックを即座に打ち切ります。
+つまり、段落はインデントされたコードブロックの直後から始められます。
 
 ```````````````````````````````` example
     foo
@@ -1938,9 +1964,11 @@ bar
 <p>bar</p>
 ````````````````````````````````
 
-
+<!--
 And indented code can occur immediately before and after other kinds of
 blocks:
+-->
+さらに、インデントされたコードブロックは他のブロックの直前あるいは直後から始められます。
 
 ```````````````````````````````` example
 # Heading
@@ -1959,8 +1987,10 @@ Heading
 <hr />
 ````````````````````````````````
 
-
+<!--
 The first line can be indented more than four spaces:
+-->
+最初の行は4つ以上のスペースでインデントできます。
 
 ```````````````````````````````` example
         foo
@@ -1971,9 +2001,11 @@ bar
 </code></pre>
 ````````````````````````````````
 
-
+<!--
 Blank lines preceding or following an indented code block
 are not included in it:
+-->
+インデントされたコードブロックの前後の空行は無視されます。
 
 ```````````````````````````````` example
 
@@ -1986,8 +2018,10 @@ are not included in it:
 </code></pre>
 ````````````````````````````````
 
-
+<!--
 Trailing spaces are included in the code block's content:
+-->
+文章の末尾のスペースも、コードブロックの内容とはなりません。
 
 ```````````````````````````````` example
     foo  
