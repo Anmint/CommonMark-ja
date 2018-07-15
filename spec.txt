@@ -33,7 +33,7 @@ And Markdown started to be used beyond the web, to author books,
 articles, slide shows, letters, and lecture notes.
 -->
 Markdownは構造的な文書を記述するためのプレーンテキストフォーマットで、eメールやusenetの投稿のフォーマット方式をベースにしています。
-John Gruber (とAaron Swartzの助け)によって開発され、2004年に[文法書](http://daringfireball.net/projects/markdown/syntax)と、MarkdownをHTMLに変換するPerlスクリプト(`Markdown.pl`)という形で発表されました。
+John Gruber (とAaron Swartzの助け)によって開発され、2004年に[文法仕様](http://daringfireball.net/projects/markdown/syntax)と、MarkdownをHTMLに変換するPerlスクリプト(`Markdown.pl`)という形で発表されました。
 その後の10年間で、数多くの実装が多くの言語で開発されました。
 あるものは、オリジナルのMarkdownを脚注や表、そのほかの文書構造で拡張しました。
 またあるものは、HTML以外のフォーマットにMarkdown文書を表示させました。
@@ -58,7 +58,7 @@ Gruberによれば、
 -->
 
 > Markdownの文法で何よりも優先するデザイン目標は、できる限り読みやすく作ることです。
-> この考えはMarkdownで書かれた文書はそのまま、プレーンテキストのまま、タグやformatting instructionでマークアップすることなく公開できるようになるべきというものです。
+> この考えはMarkdownで書かれた文書はそのまま、つまりプレーンテキストのまま、タグやformatting instructionでマークアップすることなく公開できるようになるべきというものです。
 > (<http://daringfireball.net/projects/markdown/>)
 
 <!--
@@ -305,7 +305,7 @@ John Gruberの[canonical description of Markdown's syntax](http://daringfireball
     structure?  For example, how should the following be parsed?
 -->
 
-10. ブロックレベルとインラインレベルの間の優先順位は?
+10. ブロックレベルとインラインレベルの構造の間の優先順位は?
     例えば、下の例はどのようにパースされるべきですか?
 
     ``` markdown
@@ -1313,9 +1313,12 @@ ATX見出しは内容がなくてもいいです。
 <h3></h3>
 ````````````````````````````````
 
-
+<!--
 ## Setext headings
+-->
+## Setext見出し
 
+<!--
 A [setext heading](@) consists of one or more
 lines of text, each containing at least one [non-whitespace
 character], with no more than 3 spaces indentation, followed by
@@ -1325,26 +1328,45 @@ they would be interpreted as a paragraph:  they cannot be
 interpretable as a [code fence], [ATX heading][ATX headings],
 [block quote][block quotes], [thematic break][thematic breaks],
 [list item][list items], or [HTML block][HTML blocks].
+-->
+[setext見出し]とは、1文字以上の[非ホワイトスペース文字]をそれぞれ含み、スペース3つ以下でインデントされている1行以上のテキストと、その後の行に[setext見出し線]が続くものを指します。
+テキストの行は、後にsetext見出し線がないときには、それらは単に段落とみなされるようなものでなくては行けません。
+すなわち、[コードフェンス]や[ATX見出し][ATX見出し]、[ブロッククォート][ブロッククォート]、[区切り線][区切り線]、[リスト項目][リスト項目]、[HTMLブロック][HTMLブロック]となるようなものは使えません。
 
+<!--
 A [setext heading underline](@) is a sequence of
 `=` characters or a sequence of `-` characters, with no more than 3
 spaces indentation and any number of trailing spaces.  If a line
 containing a single `-` can be interpreted as an
 empty [list items], it should be interpreted this way
 and not as a [setext heading underline].
+-->
+[setext見出し線](@)とは、`=`か`-`が連続する文字列に、スペース3つ以下のインデントと後続の0字以上のスペースからなります。
+ただ一つの`-`を含む行が、空の[リスト項目]と解釈されるような場合は、[setext見出し線]とは解釈されません。
 
+<!--
 The heading is a level 1 heading if `=` characters are used in
 the [setext heading underline], and a level 2 heading if `-`
 characters are used.  The contents of the heading are the result
 of parsing the preceding lines of text as CommonMark inline
 content.
+-->
+`=`を[setext見出し線]に使用しているときは、見出しのレベルは1となり、`-`を使用しているときはレベル2の見出しとなります。
+見出しの内容は、CommonMarkインラインコンテンツとして、見出し線の前の行をパースした結果が使われます。
 
+<!--
 In general, a setext heading need not be preceded or followed by a
 blank line.  However, it cannot interrupt a paragraph, so when a
 setext heading comes after a paragraph, a blank line is needed between
 them.
+-->
+一般的に、setext見出しはその前にも後にも空行を必要とはしていません。
+しかしながら、この見出しは段落を分割しないので、setext見出しが段落の後に来る場合は、それらとの間に空行が必要となります。
 
+<!--
 Simple examples:
+-->
+簡単な例を示します。
 
 ```````````````````````````````` example
 Foo *bar*
@@ -1357,8 +1379,10 @@ Foo *bar*
 <h2>Foo <em>bar</em></h2>
 ````````````````````````````````
 
-
+<!--
 The content of the header may span more than one line:
+-->
+見出しの内容は複数行に渡っても構いません。
 
 ```````````````````````````````` example
 Foo *bar
@@ -1369,8 +1393,10 @@ baz*
 baz</em></h1>
 ````````````````````````````````
 
-
+<!--
 The underlining can be any length:
+-->
+見出し線の長さは自由です。
 
 ```````````````````````````````` example
 Foo
@@ -1383,9 +1409,11 @@ Foo
 <h1>Foo</h1>
 ````````````````````````````````
 
-
+<!--
 The heading content can be indented up to three spaces, and need
 not line up with the underlining:
+-->
+見出しの内容はスペース3つ分までインデントでき、見出し線も一緒にインデントする必要はありません。
 
 ```````````````````````````````` example
    Foo
@@ -1402,8 +1430,10 @@ not line up with the underlining:
 <h1>Foo</h1>
 ````````````````````````````````
 
-
+<!--
 Four spaces indent is too much:
+-->
+スペース4つは多すぎます。
 
 ```````````````````````````````` example
     Foo
@@ -1420,9 +1450,11 @@ Foo
 <hr />
 ````````````````````````````````
 
-
+<!--
 The setext heading underline can be indented up to three spaces, and
 may have trailing spaces:
+-->
+setext見出し線はスペース3つまでインデントでき、その後にいくらでもスペースをつけられます。
 
 ```````````````````````````````` example
 Foo
@@ -1431,8 +1463,10 @@ Foo
 <h2>Foo</h2>
 ````````````````````````````````
 
-
+<!--
 Four spaces is too much:
+-->
+スペース4つは多すぎます。
 
 ```````````````````````````````` example
 Foo
@@ -1442,8 +1476,10 @@ Foo
 ---</p>
 ````````````````````````````````
 
-
+<!--
 The setext heading underline cannot contain internal spaces:
+-->
+setext見出し線は、その線の中にスペースを入れてはいけません。
 
 ```````````````````````````````` example
 Foo
@@ -1458,8 +1494,10 @@ Foo
 <hr />
 ````````````````````````````````
 
-
+<!--
 Trailing spaces in the content line do not cause a line break:
+-->
+見出しの後のスペースは、改行として作用することはありません。
 
 ```````````````````````````````` example
 Foo  
@@ -1468,8 +1506,10 @@ Foo
 <h2>Foo</h2>
 ````````````````````````````````
 
-
+<!--
 Nor does a backslash at the end:
+-->
+行末のバックスラッシュも同様に作用しません。
 
 ```````````````````````````````` example
 Foo\
@@ -1478,9 +1518,11 @@ Foo\
 <h2>Foo\</h2>
 ````````````````````````````````
 
-
+<!--
 Since indicators of block structure take precedence over
 indicators of inline structure, the following are setext headings:
+-->
+ブロック構造の作用素よりインライン構造の作用素の方が優先するため、下の例はsetext見出しとなります。
 
 ```````````````````````````````` example
 `Foo
@@ -1497,9 +1539,11 @@ of dashes"/>
 <p>of dashes&quot;/&gt;</p>
 ````````````````````````````````
 
-
+<!--
 The setext heading underline cannot be a [lazy continuation
 line] in a list item or block quote:
+-->
+setext見出し線はブロッククォートやリスト項目の中の[lazy continuation line]にはなりません。
 
 ```````````````````````````````` example
 > Foo
@@ -1535,10 +1579,13 @@ bar
 <hr />
 ````````````````````````````````
 
-
+<!--
 A blank line is needed between a paragraph and a following
 setext heading, since otherwise the paragraph becomes part
 of the heading's content:
+-->
+段落と、それに続くsetext見出しの間には空行が必要です。
+さもなければ、段落は見出しの一部となってしまいます。
 
 ```````````````````````````````` example
 Foo
@@ -1549,9 +1596,11 @@ Bar
 Bar</h2>
 ````````````````````````````````
 
-
+<!--
 But in general a blank line is not required before or after
 setext headings:
+-->
+ただし、通常はsetext見出しの前後には空行は必要ありません。
 
 ```````````````````````````````` example
 ---
@@ -1567,8 +1616,10 @@ Baz
 <p>Baz</p>
 ````````````````````````````````
 
-
+<!--
 Setext headings cannot be empty:
+-->
+setext見出しは空にはできません。
 
 ```````````````````````````````` example
 
@@ -1577,10 +1628,13 @@ Setext headings cannot be empty:
 <p>====</p>
 ````````````````````````````````
 
-
+<!--
 Setext heading text lines must not be interpretable as block
 constructs other than paragraphs.  So, the line of dashes
 in these examples gets interpreted as a thematic break:
+-->
+setext見出しのテキストは、段落以外のブロック構造として解釈されてはいけません。
+そのため、下の例の`-`の連続は、単に区切り線として解釈されます。
 
 ```````````````````````````````` example
 ---
@@ -1622,9 +1676,11 @@ in these examples gets interpreted as a thematic break:
 <hr />
 ````````````````````````````````
 
-
+<!--
 If you want a heading with `> foo` as its literal text, you can
 use backslash escapes:
+-->
+見出しに`> foo`とそのまま入れたい場合は、バックスラッシュでエスケープします。
 
 ```````````````````````````````` example
 \> foo
@@ -1633,10 +1689,13 @@ use backslash escapes:
 <h2>&gt; foo</h2>
 ````````````````````````````````
 
-
+<!--
 **Compatibility note:**  Most existing Markdown implementations
 do not allow the text of setext headings to span multiple lines.
 But there is no consensus about how to interpret
+-->
+**互換性のための注意事項:** 既存のMarkdown実装のほとんどは、複数行にわたるsetext見出しのテキストを許容していません。
+しかし、どのように解釈すべきかというコンセンサスもありません。
 
 ``` markdown
 Foo
@@ -1645,17 +1704,31 @@ bar
 baz
 ```
 
+<!--
 One can find four different interpretations:
+-->
+4つの異なる解釈があります:
 
+<!--
 1. paragraph "Foo", heading "bar", paragraph "baz"
 2. paragraph "Foo bar", thematic break, paragraph "baz"
 3. paragraph "Foo bar --- baz"
 4. heading "Foo bar", paragraph "baz"
+-->
 
+1. 段落の"Foo"、見出しの"bar"、段落の"baz"
+2. 段落の"Foo bar"、区切り線、段落の"baz"
+3. 段落の"Foo bar --- baz"
+4. 見出しの"Foo bar"、段落の"baz"
+
+<!--
 We find interpretation 4 most natural, and interpretation 4
 increases the expressive power of CommonMark, by allowing
 multiline headings.  Authors who want interpretation 1 can
 put a blank line after the first paragraph:
+-->
+4番目の解釈が最も自然であり、このように複数行の見出しを許容することでCommonMarkの表現力が増すと分かりました。
+1番目の解釈を求める著者は、最初の段落の後に空行を入れればよいです。
 
 ```````````````````````````````` example
 Foo
@@ -1669,9 +1742,11 @@ baz
 <p>baz</p>
 ````````````````````````````````
 
-
+<!--
 Authors who want interpretation 2 can put blank lines around
 the thematic break,
+-->
+2番目の解釈を求める著者は、区切り線の前後に空行を入れればよいです。
 
 ```````````````````````````````` example
 Foo
@@ -1687,9 +1762,11 @@ bar</p>
 <p>baz</p>
 ````````````````````````````````
 
-
+<!--
 or use a thematic break that cannot count as a [setext heading
 underline], such as
+-->
+あるいは下のように、[setext区切り線]にならない区切り線を使うことです。
 
 ```````````````````````````````` example
 Foo
@@ -1703,8 +1780,10 @@ bar</p>
 <p>baz</p>
 ````````````````````````````````
 
-
+<!--
 Authors who want interpretation 3 can use backslash escapes:
+-->
+3番目の解釈を求める著者はバックスラッシュによるエスケープを使えます。
 
 ```````````````````````````````` example
 Foo
