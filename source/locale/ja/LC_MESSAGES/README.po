@@ -4,14 +4,12 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: commonmark-ja \n"
+msgstr "Project-Id-Version: commonmark-ja \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-21 14:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-07-21 14:59+0900\n"
+"Last-Translator: Anno Kagurazaka (AnMint) <h.work.deputy@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -27,26 +25,26 @@ msgid ""
 "CommonMark is a rationalized version of Markdown syntax, with a `spec "
 "<http://spec.commonmark.org/>`__ and BSD-licensed reference "
 "implementations in C and JavaScript."
-msgstr ""
+msgstr "CommonMarkはMarkdown文法を整理したもので、 `仕様 <http://spec.commonmark.org/>`__ およびBSDライセンスの下で公開されているCとJavaScriptの実装があります。"
 
 #: ../../source/README.rst:8
 msgid "`Try it now! <http://try.commonmark.org/>`__"
-msgstr ""
+msgstr "`試してみよう!<http://try.commonmark.org/>`__"
 
 #: ../../source/README.rst:10
 msgid "For more details, see http://commonmark.org."
-msgstr ""
+msgstr "詳細は http://commonmark.org をご覧ください。"
 
 #: ../../source/README.rst:12
 msgid ""
 "This repository contains the spec itself, along with tools for running "
 "tests against the spec, and for creating HTML and PDF versions of the "
 "spec."
-msgstr ""
+msgstr "このリポジトリは、仕様書と、仕様に沿っているかテストするためのツール、および仕様書をHTMLやPDFにするためのツールが含まれています。"
 
 #: ../../source/README.rst:16
 msgid "The reference implementations live in separate repositories:"
-msgstr ""
+msgstr "リファレンス実装は別のリポジトリにあります。"
 
 #: ../../source/README.rst:18
 msgid "https://github.com/commonmark/cmark (C)"
@@ -61,39 +59,39 @@ msgid ""
 "There is a list of third-party libraries in a dozen different languages "
 "`here <https://github.com/commonmark/CommonMark/wiki/List-of-CommonMark-"
 "Implementations>`__."
-msgstr ""
+msgstr "`こちら <https://github.com/commonmark/CommonMark/wiki/List-of-CommonMark-Implementations>`__ に色々な言語で実装されたサードパーティーライブラリがあります。"
 
 #: ../../source/README.rst:25
 msgid "Running tests against the spec"
-msgstr ""
+msgstr "仕様書に沿っているかテストする"
 
 #: ../../source/README.rst:27
 msgid ""
 "`The spec <http://spec.commonmark.org/>`__ contains over 500 embedded "
 "examples which serve as conformance tests. To run the tests using an "
 "executable ``$PROG``:"
-msgstr ""
+msgstr "`仕様 <http://spec.commonmark.org/>`__ には、適合試験を実施するための500以上の組み込みテストが含まれています。実行可能な ``$PROG`` を用いてテストを実行するには、次のようにします。"
 
 #: ../../source/README.rst:35
 msgid ""
 "If you want to extract the raw test data from the spec without actually "
 "running the tests, you can do:"
-msgstr ""
+msgstr "実際にテストを実行することなく、仕様からテストデータを抽出したい場合は、次のようにします。"
 
 #: ../../source/README.rst:42
 msgid "and you'll get all the tests in JSON format."
-msgstr ""
+msgstr "こうするとすべてのテストをJSON形式で得られます。"
 
 #: ../../source/README.rst:45
 msgid "The spec"
-msgstr ""
+msgstr "仕様について"
 
 #: ../../source/README.rst:47
 msgid ""
 "The source of `the spec <http://spec.commonmark.org/>`__ is ``spec.txt``."
 " This is basically a Markdown file, with code examples written in a "
 "shorthand form:"
-msgstr ""
+msgstr "`仕様 <http://spec.commonmark.org/>`__ のソースは ``spec.txt`` です。基本的にはMarkdown形式で、shorthand formで書かれたコード例が付いています。"
 
 #: ../../source/README.rst:59
 msgid ""
@@ -102,7 +100,7 @@ msgid ""
 "lua rock ``lcmark`` installed: after installing lua and lua rocks, "
 "``luarocks install lcmark``. For the PDF you must also have xelatex "
 "installed."
-msgstr ""
+msgstr "HTML版の仕様書をビルドするには、 ``make spec.html`` を実行してください。PDF版の場合は ``make spec.pdf`` です。両方とも ``lcmark`` というlua rockが必要です。luaとlua rockをインストールしたのち、 ``luarocks install lcmark`` としてください。PDF版の場合はxelatexもインストールする必要があります。"
 
 #: ../../source/README.rst:65
 msgid ""
@@ -111,7 +109,7 @@ msgid ""
 "computer program---but a declarative description of what counts as a "
 "block quote, a code block, and each of the other structural elements that"
 " can make up a Markdown document."
-msgstr ""
+msgstr "仕様書はコンピュータによる読み取りではなく、人間の書き手からの観点で書かれています。アルゴリズム—プログラムをただ文書化したもの—ではなく、引用やコードブロック、Markdown文書を構成する構成要素として何を含めるのかという宣言的な文書になっています。"
 
 #: ../../source/README.rst:71
 msgid ""
@@ -130,7 +128,7 @@ msgid ""
 "cases, we have departed slightly from the canonical syntax description, "
 "in ways that we think further the goals of Markdown as stated in that "
 "description."
-msgstr ""
+msgstr "John Gruberの `文法規約 <http://daringfireball.net/projects/markdown/syntax>`__ では、正確な仕様を書くにあたって膨大な決定をする必要があるような定まっていない文法や、幾分適当なものも多く残っています。決定をするにあたっては、私たちは簡潔性、可読性、表現力や一貫性についての検討や既存の習慣に訴えてきました。非互換な既存のMarkdown実装で作られる多くの「通常の」文書が、可能な限り著者の意図通りに表示されるようにすることを試みてきました。そして私たちは異なる要素が互いに調和的に働くようにルールを定めることを試みてきました。異なる決定事項があるところでは(例えば、リストのインデントにそういったルールがあります)、私たちが選択した論拠を明確にしています。いくつかの項目では、元の文法規約を起点としてMarkdownのさらなる到達点を考えた結果として、元の規約から少し逸脱しています。"
 
 #: ../../source/README.rst:87
 msgid ""
@@ -139,24 +137,24 @@ msgid ""
 "like footnotes and definition lists. It is important to get the core "
 "right before considering such things. However, we have included a visible"
 " syntax for line breaks and fenced code blocks."
-msgstr ""
+msgstr "ほとんどのパートでは、脚注や定義リストのような拡張と競合する、Gruberの文法規約で示されている基礎的な要素を制限しています。重要なことは、こういったことを考える前に望ましい核心部分を得ることです。しかしながら、改行や囲まれたコードブロックのための明示的な文法は仕様に含まれています。"
 
 #: ../../source/README.rst:94
 msgid "Differences from original Markdown"
-msgstr ""
+msgstr "オリジナルのMarkdownとの違い"
 
 #: ../../source/README.rst:96
 msgid ""
 "There are only a few places where this spec says things that contradict "
 "the canonical syntax description:"
-msgstr ""
+msgstr "仕様書のいくつかの箇所には元の文法規約と矛盾するようなものがあります。"
 
 #: ../../source/README.rst:99
 msgid ""
 "It allows all punctuation symbols to be backslash-escaped, not just the "
 "symbols with special meanings in Markdown. We found that it was just too "
 "hard to remember which symbols could be escaped."
-msgstr ""
+msgstr "Markdownで特別な意味を持つ記号ではない、バックスラッシュでエスケープされる全ての約物を許容しています。どの記号がエスケープできるのか覚えておくのがとても大変だとわかったためです。"
 
 #: ../../source/README.rst:103
 msgid ""
@@ -164,7 +162,7 @@ msgid ""
 "the end of the line, supplementing the two-spaces-at-the-end-of-line "
 "rule. This is motivated by persistent complaints about the “invisible” "
 "nature of the two-space rule."
-msgstr ""
+msgstr "強制改行の他の文法として、「行末にスペース2つ」ルールを補完する、行末のバックスラッシュを導入しています。スペース2つルールの「不可視」状態について根強い抗議が動機です。"
 
 #: ../../source/README.rst:108
 msgid ""
@@ -173,7 +171,7 @@ msgid ""
 " a title in inline links, but not in reference links. This kind of "
 "difference is really hard for users to remember, so the spec allows "
 "single quotes in both contexts."
-msgstr ""
+msgstr "リンクの文法が(後方互換性を保った形で)ほんの少しばかり予測可能になりました。例えば、 ``Markdown.pl`` ではインラインリンクでタイトルの周りをシングルクォートで囲むことを許容していましたが、参照リンクではしていませんでした。この手の違いはユーザーが本当に覚えづらいので、両方ともシングルクォートが可能になっています。"
 
 #: ../../source/README.rst:114
 msgid ""
@@ -182,11 +180,11 @@ msgid ""
 "spec's proposal makes it easy to include Markdown inside HTML block-level"
 " tags, if you want to, but also allows you to exclude this. It also makes"
 " parsing much easier, avoiding expensive backtracking."
-msgstr ""
+msgstr "ほとんどのケースでは違いはないはずですが、HTMLブロックのルールは異なっています。(詳細はHTMLブロックの項目を参照。) 仕様での提案はMarkdownを、HTMLブロックレベルのタグの中に入れやすくしているだけでなく、もし望むなら取り除くことも可能です。高負荷なバックトラックを避けて、パースもしやすくしています。"
 
 #: ../../source/README.rst:121
 msgid "It does not collapse adjacent bird-track blocks into a single blockquote:"
-msgstr ""
+msgstr "隣り合う不等号型のブロックがただ一つの引用になってしまうのを回避しています。"
 
 #: ../../source/README.rst:134
 msgid ""
@@ -198,34 +196,34 @@ msgid ""
 "the way a human writer or reader would intuitively understand them. (We "
 "could give numerous examples of perfectly natural looking lists that "
 "nearly every existing implementation flubs up.)"
-msgstr ""
+msgstr "(HTMLブロックと同様に)ほとんどのリストは意図した通りに表示されるはずですが、リスト中のコンテンツについてのルールが何点か異なります。Choice points and differences in the subsection of List itemsについてある議論があり、これが動機となりました。私たちは、仕様の提案はどの既存の実装よりも人間が直感的に理解しやすい形でリストを表示できると考えています。(一見完璧に自然に見えるリストなのにほとんど全ての実装が表示に失敗する例をいくつも挙げられます。)"
 
 #: ../../source/README.rst:144
 msgid ""
 "Changing bullet characters, or changing from bullets to numbers or vice "
 "versa, starts a new list. We think that is almost always going to be the "
 "writer's intent."
-msgstr ""
+msgstr "箇条書きの記号を途中で変えたり、箇条書きから順序リストにしたり、また逆のパターンでも新しいリストが始まります。この方がほとんどの場合、書き手の意図に沿うものだと考えています。"
 
 #: ../../source/README.rst:148
 msgid ""
 "The number that begins an ordered list item may be followed by either "
 "``.`` or ``)``. Changing the delimiter style starts a new list."
-msgstr ""
+msgstr "順序リストを始める番号を、 ``.`` や ``)`` から始められます。区切り記号を途中で変えると、新しいリストが始まります。"
 
 #: ../../source/README.rst:151
 msgid "The start number of an ordered list is significant."
-msgstr ""
+msgstr "順序リストが、最初のリストの番号から始まるようになります。"
 
 #: ../../source/README.rst:153
 msgid ""
 "Fenced code blocks are supported, delimited by either backticks "
 "(:literal:`\\``\\``) or tildes (``~~~``)."
-msgstr ""
+msgstr "囲まれたコードブロックがサポートされます。区切り記号はバッククォート(:literal:`\\``\\``)かチルダ(``~~~``)です。"
 
 #: ../../source/README.rst:157
 msgid "Contributing"
-msgstr ""
+msgstr "支援"
 
 #: ../../source/README.rst:159
 msgid ""
@@ -234,15 +232,15 @@ msgid ""
 "issues for questions and possibly open-ended discussions. Use the `github"
 " issue tracker <http://github.com/commonmark/CommonMark/issues>`__ only "
 "for simple, clear, actionable issues."
-msgstr ""
+msgstr "`forum for discussing CommonMark <http://talk.commonmark.org>`__ があります。github issuesの代わりに、質問や、終わりのなさそうな議論についてはこちらを使ってください。`github issue tracker <http://github.com/commonmark/CommonMark/issues>`__ は簡潔で、実際手をつけるべき問題についてのみ使ってください。"
 
 #: ../../source/README.rst:167
 msgid "Authors"
-msgstr ""
+msgstr "著者"
 
 #: ../../source/README.rst:169
 msgid "The spec was written by John MacFarlane, drawing on"
-msgstr ""
+msgstr "この仕様はJohn MacFarleneによって書かれ、次のような寄与がありました。"
 
 #: ../../source/README.rst:171
 msgid ""
@@ -252,25 +250,25 @@ msgid ""
 "<http://github.com/jgm/pandoc>`__) and the first markdown parsers based "
 "on PEG grammars (`peg-markdown <http://github.com/jgm/peg-markdown>`__, "
 "`lunamark <http://github.com/jgm/lunamark>`__)"
-msgstr ""
+msgstr "正規表現によらないはじめてのMarkdown実装(`pandoc <http://github.com/jgm/pandoc>`__)やPEG文法によるはじめてのMarkdownパーサ(`peg-markdown <http://github.com/jgm/peg-markdown>`__, `lunamark <http://github.com/jgm/lunamark>`__)を含む、いくつかのMarkdown実装を作成、実装した経験"
 
 #: ../../source/README.rst:178
 msgid ""
 "a detailed examination of the differences between existing Markdown "
 "implementations using `BabelMark 2 "
 "<http://johnmacfarlane.net/babelmark2/>`__, and"
-msgstr ""
+msgstr "`BabelMark 2 <http://johnmacfarlane.net/babelmark2/>`__ を用いた、既存のMarkdown実装との違いを調べた詳細な試験"
 
 #: ../../source/README.rst:181
 msgid ""
 "extensive discussions with David Greenspan, Jeff Atwood, Vicent Marti, "
 "Neil Williams, and Benjamin Dumke-von der Ehe."
-msgstr ""
+msgstr "David Greenspan、Jeff Atwood、Vicent Marti、Neil Williams、Benjamin Dumke-von-von der Eheとの広範な議論"
 
 #: ../../source/README.rst:184
 msgid ""
 "Since the first announcement, many people have contributed ideas. Kārlis "
 "Gaņģis was especially helpful in refining the rules for emphasis, strong "
 "emphasis, links, and images."
-msgstr ""
+msgstr "最初のアナウンスから、たくさんの人々がアイデアをくれました。Kārlis Gaņģisは、強調やリンク、画像についてのルールの精緻化を特に助けてくれました。"
 
