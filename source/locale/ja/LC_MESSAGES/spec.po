@@ -4,14 +4,12 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: commonmark-ja \n"
+msgstr "Project-Id-Version: commonmark-ja \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-21 14:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-07-21 14:59+0900\n"
+"Last-Translator: Anno Kagurazaka (AnMint) <h.work.deputy@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -23,15 +21,15 @@ msgid ""
 "title: CommonMark Spec author: John MacFarlane version: 0.28 date: "
 "'2017-08-01' license: '`CC-BY-SA 4.0 <http://creativecommons.org/licenses"
 "/by-sa/4.0/>`__' ..."
-msgstr ""
+msgstr "CommonMark仕様書 (John MacFarlane著) バージョン 0.28 '`CC-BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`__' ライセンス"
 
 #: ../../source/spec.rst:8
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../source/spec.rst:11
 msgid "What is Markdown?"
-msgstr ""
+msgstr "Markdownとは?"
 
 #: ../../source/spec.rst:13
 msgid ""
@@ -48,13 +46,13 @@ msgid ""
 "GitHub had millions of people using Markdown. And Markdown started to be "
 "used beyond the web, to author books, articles, slide shows, letters, and"
 " lecture notes."
-msgstr ""
+msgstr "Markdownは構造的な文書を記述するためのプレーンテキストフォーマットで、eメールやusenetの投稿のフォーマット方式をベースにしています。John Gruber (とAaron Swartzの助け)によって開発され、2004年に `syntax description <http://daringfireball.net/projects/markdown/syntax>`__ と、MarkdownをHTMLに変換するPerlスクリプト(``Markdown.pl``)という形で発表されました。その後の10年間で、数多くの実装が多くの言語で開発されました。あるものは、オリジナルのMarkdownを脚注や表、そのほかの文書構造で拡張しました。またあるものは、HTML以外のフォーマットにMarkdown文書を表示させました。Reddit、StackOverflow、Githubのようなウェブサイトでは、何百万のユーザがMarkdownを使用しています。そしてMarkdownはWebを飛び越え、本や論文、スライドショー、レター、手順書を執筆するのに使われるようになりました。"
 
 #: ../../source/spec.rst:27
 msgid ""
 "What distinguishes Markdown from many other lightweight markup syntaxes, "
 "which are often easier to write, is its readability. As Gruber writes:"
-msgstr ""
+msgstr "Markdownとその他の、より書きやすい、軽量マークアップ言語を峻別しているもの、それは可読性です。Gruberによれば、"
 
 #: ../../source/spec.rst:30
 msgid ""
@@ -63,18 +61,18 @@ msgid ""
 "should be publishable as-is, as plain text, without looking like it's "
 "been marked up with tags or formatting instructions. "
 "(http://daringfireball.net/projects/markdown/)"
-msgstr ""
+msgstr "Markdownの文法で何よりも優先するデザイン目標は、できる限り読みやすく作ることです。この考えはMarkdownで書かれた文書はそのまま、つまりプレーンテキストのまま、タグやformatting instructionでマークアップすることなく公開できるようになるべきというものです。(http://daringfireball.net/projects/markdown/)"
 
 #: ../../source/spec.rst:37
 msgid ""
 "The point can be illustrated by comparing a sample of `AsciiDoc "
 "<http://www.methods.co.nz/asciidoc/>`__ with an equivalent sample of "
 "Markdown. Here is a sample of AsciiDoc from the AsciiDoc manual:"
-msgstr ""
+msgstr "この点はMarkdownと `AsciiDoc <http://www.methods.co.nz/asciidoc/>`__ のサンプルを比較すると表れてきます。これがAsciidocのマニュアルから引用したサンプルです。"
 
 #: ../../source/spec.rst:71
 msgid "And here is the equivalent in Markdown:"
-msgstr ""
+msgstr "そしてこれがMarkdownでの同一の文書です。"
 
 #: ../../source/spec.rst:97
 msgid ""
@@ -82,11 +80,11 @@ msgid ""
 "worry about indentation. But the Markdown version is much easier to read."
 " The nesting of list items is apparent to the eye in the source, not just"
 " in the processed document."
-msgstr ""
+msgstr "Asciidoc版は、間違いなく書きやすい方でしょう。インデントについて心配する必要もありません。しかし、Markdown版の方が読みやすいです。リスト項目のネストは出力された文書の中だけでなく、ソースからも明らかです。"
 
 #: ../../source/spec.rst:103
 msgid "Why is a spec needed?"
-msgstr ""
+msgstr "なぜ仕様が必要?"
 
 #: ../../source/spec.rst:105
 msgid ""
@@ -94,7 +92,7 @@ msgid ""
 "<http://daringfireball.net/projects/markdown/syntax>`__ does not specify "
 "the syntax unambiguously. Here are some examples of questions it does not"
 " answer:"
-msgstr ""
+msgstr "John Gruberの `canonical description of Markdown's syntax <http://daringfireball.net/projects/markdown/syntax>`__ では、文法を厳密に規定していませんでした。下にはそういった答えのない疑問を示しています。"
 
 #: ../../source/spec.rst:110
 msgid ""
@@ -106,7 +104,7 @@ msgid ""
 " issue often lead to surprises for users in real documents. (See `this "
 "comment by John Gruber "
 "<http://article.gmane.org/gmane.text.markdown.general/1997>`__.)"
-msgstr ""
+msgstr "サブリストにはどれくらいのインデントが必要か?仕様では続きの文章はスペース4つのインデントが必要とされているが、サブリストについては明示されていません。これについてもスペース4つだと考えるのは妥当でしょうが、 ``Markdown.pl`` はそう要求していません。これは「コーナーケース」ではなく、実際の文書でユーザーを驚かすようなこの問題について、実装間で違いがあります。(`John Gruberからのコメント <http://article.gmane.org/gmane.text.markdown.general/1997>`__を参照)"
 
 #: ../../source/spec.rst:119
 msgid ""
@@ -117,87 +115,87 @@ msgid ""
 "blockquote, while others do not). (John Gruber has also spoken `in favor "
 "of requiring the blank lines "
 "<http://article.gmane.org/gmane.text.markdown.general/2146>`__.)"
-msgstr ""
+msgstr "ブロッククォートや見出しの前に空白行が必要か?ほとんどの実装では空白行を必要としてはいません。しかし、これはhard-wrappedテキストで予想外の結果を招くことがあり、パースのときに曖昧さを誘発します (ブロッククォートの中に見出しをつける実装もありますが、ほかの実装ではそうではありません)。(John Gruberも `空白行を必須とすることに賛成しています <http://article.gmane.org/gmane.text.markdown.general/2146>`__ 。)"
 
 #: ../../source/spec.rst:127
 msgid ""
 "Is a blank line needed before an indented code block? (``Markdown.pl`` "
 "requires it, but this is not mentioned in the documentation, and some "
 "implementations do not require it.)"
-msgstr ""
+msgstr "インデントされたコードブロックの前に空白行が必要か?( ``Markdown.pl`` では必要としていますが、ドキュメントでは言及されていませんし、必要としていない実装もあります。)"
 
 #: ../../source/spec.rst:136
 msgid ""
 "What is the exact rule for determining when list items get wrapped in "
 "``<p>`` tags? Can a list be partially \"loose\" and partially \"tight\"? "
 "What should we do with a list like this?"
-msgstr ""
+msgstr "リストの項目が、いつ ``<p>`` タグで囲まれるか判断する厳密なルールは何か?部分的に「ルーズ」で、部分的に「タイト」なリストはできるのでしょうか?そのようなリストについてどうすべきなのでしょうか?"
 
 #: ../../source/spec.rst:147
 msgid "Or this?"
-msgstr ""
+msgstr "あるいはこれは?"
 
 #: ../../source/spec.rst:157
 msgid ""
 "(There are some relevant comments by John Gruber `here "
 "<http://article.gmane.org/gmane.text.markdown.general/2554>`__.)"
-msgstr ""
+msgstr "(John Gruberによる関連したコメントが `こちらに <http://article.gmane.org/gmane.text.markdown.general/2554>`__ あります。)"
 
 #: ../../source/spec.rst:160
 msgid "Can list markers be indented? Can ordered list markers be right-aligned?"
-msgstr ""
+msgstr "リストマーカーはインデントできる?順序リストのマーカーは右揃えできる?"
 
 #: ../../source/spec.rst:169
 msgid ""
 "Is this one list with a thematic break in its second item, or two lists "
 "separated by a thematic break?"
-msgstr ""
+msgstr "下のリストは、2つめの項目に水平線をもつ1つのリスト? それとも水平線で分割された2つのリスト?"
 
 #: ../../source/spec.rst:178
 msgid ""
 "When list markers change from numbers to bullets, do we have two lists or"
 " one? (The Markdown syntax description suggests two, but the perl scripts"
 " and many other implementations produce one.)"
-msgstr ""
+msgstr "リストマーカーが番号から箇条書きに変わるとき、これは1つのリスト? それとも2つのリスト?(Markdownの文法規約では2つであるとしていますが、perlスクリプトやその他の多くの実装では一つのリストを出力します。)"
 
 #: ../../source/spec.rst:189
 msgid ""
 "What are the precedence rules for the markers of inline structure? For "
 "example, is the following a valid link, or does the code span take "
 "precedence ?"
-msgstr ""
+msgstr "インライン構造のマーカーについての優先順位は?例えば、下の例は正しいリンクか、あるいはコードブロックのどちらが優先されますか?"
 
 #: ../../source/spec.rst:197
 msgid ""
 "What are the precedence rules for markers of emphasis and strong "
 "emphasis? For example, how should the following be parsed?"
-msgstr ""
+msgstr "太字と斜体の優先順位は?例えば、下の例はどのようにパースされるべきですか?"
 
 #: ../../source/spec.rst:204
 msgid ""
 "What are the precedence rules between block-level and inline-level "
 "structure? For example, how should the following be parsed?"
-msgstr ""
+msgstr "ブロックレベルとインラインレベルの構造の間の優先順位は?例えば、下の例はどのようにパースされるべきですか?"
 
 #: ../../source/spec.rst:212
 msgid ""
 "Can list items include section headings? (``Markdown.pl`` does not allow "
 "this, but does allow blockquotes to include headings.)"
-msgstr ""
+msgstr "リストの項目は見出しを入れられるか?( ``Markdown.pl`` は許容していませんが、ブロッククォートは見出しをつけられます。)"
 
 #: ../../source/spec.rst:219
 msgid "Can list items be empty?"
-msgstr ""
+msgstr "リストの項目を空にできるか?"
 
 #: ../../source/spec.rst:227
 msgid "Can link references be defined inside block quotes or list items?"
-msgstr ""
+msgstr "参照リンクはリストの項目か、ブロッククォートの中で定義できるか?"
 
 #: ../../source/spec.rst:235
 msgid ""
 "If there are multiple definitions for the same reference, which takes "
 "precedence?"
-msgstr ""
+msgstr "同じ参照に複数の定義があったとき、どのような優先順位を取ればいいか?"
 
 #: ../../source/spec.rst:245
 msgid ""
@@ -205,7 +203,7 @@ msgid ""
 " resolve these ambiguities. But ``Markdown.pl`` was quite buggy, and gave"
 " manifestly bad results in many cases, so it was not a satisfactory "
 "replacement for a spec."
-msgstr ""
+msgstr "仕様に書かれていないところは、初期の実装は ``Markdown.pl`` を参考にしてこれらの曖昧さを解決していきました。しかし、 ``Markdown.pl`` はかなりバグまみれで、多くの場合明らかに悪い結果を出したので、仕様の代替として満足するところまではいきませんでした。"
 
 #: ../../source/spec.rst:250
 msgid ""
@@ -215,11 +213,11 @@ msgid ""
 "differently on another (say, converting to docbook using pandoc). To make"
 " matters worse, because nothing in Markdown counts as a \"syntax error,\""
 " the divergence often isn't discovered right away."
-msgstr ""
+msgstr "曖昧さのない仕様というものがないため、実装はかなり分岐してしまいました。結果として、ユーザーはあるシステムである形式の出力をしたり (github wikiとか)、それとは異なり他のに出力したり(pandocでdocbook形式に変換したり)する文書を見つけるのにしばしば驚いています。さらに悪いことに、Markdownには「シンタックスエラー」として何も検知しないので、こういった実装のばらつきはすぐには見つかりません。"
 
 #: ../../source/spec.rst:258
 msgid "About this document"
-msgstr ""
+msgstr "この文書について"
 
 #: ../../source/spec.rst:260
 msgid ""
@@ -228,7 +226,7 @@ msgid ""
 "intended to double as conformance tests. An accompanying script "
 "``spec_tests.py`` can be used to run the tests against any Markdown "
 "program:"
-msgstr ""
+msgstr "この文書ではMarkdownの文法を明確にすることを企図しています。Markdownと並んでHTMLの例を多く収載しました。これらは、適合性テストも兼ねています。付属の ``spec_tests.py`` というスクリプトで、Markdownプログラムに対するテストを実行できます。"
 
 #: ../../source/spec.rst:270
 msgid ""
@@ -238,7 +236,7 @@ msgid ""
 " representing the structural distinctions we need to make, and the choice"
 " of HTML for the tests makes it possible to run the tests against an "
 "implementation without writing an abstract syntax tree renderer."
-msgstr ""
+msgstr "この文書は、Markdownをどのように抽象構文木にパースするかについて書いているため、HTMLの代わりに構文木の抽象表現を用いる方が理解しやすかったでしょう。しかしHTMLは、私たちが作りたい構造上の差異を表現する能力がありますし、テスト対象にHTMLを選択することで、抽象構文木のランダラーを書くことなく、実際の実装についてテストできるようになります。"
 
 #: ../../source/spec.rst:277
 msgid ""
@@ -246,23 +244,23 @@ msgid ""
 "Markdown with a small extension for the side-by-side tests. The script "
 "``tools/makespec.py`` can be used to convert ``spec.txt`` into HTML or "
 "CommonMark (which can then be converted into other formats)."
-msgstr ""
+msgstr "この文書は ``spec.txt`` というテキストファイルから生成されていて、side-by-sideテストのための小規模な拡張を含んだMarkdownで書かれています。``tools/makespec.py`` というスクリプトで、 ``spec.txt`` をHTMLやCommonnMark(そしてそこからさらにほかのフォーマット)に変換できます。"
 
 #: ../../source/spec.rst:282
 msgid "In the examples, the ``→`` character is used to represent tabs."
-msgstr ""
+msgstr "例の中では、 ``→`` はタブを示しています。"
 
 #: ../../source/spec.rst:285
 msgid "Preliminaries"
-msgstr ""
+msgstr "準備"
 
 #: ../../source/spec.rst:288
 msgid "Characters and lines"
-msgstr ""
+msgstr "文字と行"
 
 #: ../../source/spec.rst:290
 msgid "Any sequence of [characters] is a valid CommonMark document."
-msgstr ""
+msgstr "[文字]が連続したものは正常なCommonMark文書です。"
 
 #: ../../source/spec.rst:292
 msgid ""
@@ -270,72 +268,72 @@ msgid ""
 "(for example, combining accents) do not correspond to characters in an "
 "intuitive sense, all code points count as characters for purposes of this"
 " spec."
-msgstr ""
+msgstr "`文字 <@>`__ はUnicodeのコードポイントです。あるコードポイントは(例えば複合アクセント)直感的には文字に対応しないのですが、この仕様ではすべてのコードポイントを文字としてカウントします。"
 
 #: ../../source/spec.rst:297
 msgid ""
 "This spec does not specify an encoding; it thinks of lines as composed of"
 " [characters] rather than bytes. A conforming parser may be limited to a "
 "certain encoding."
-msgstr ""
+msgstr "この仕様ではエンコード形式を指定しません。バイト列というよりは[文字]の構成物として行を評価します。合致するパーサは、特定のエンコードに制限するかもしれません。"
 
 #: ../../source/spec.rst:301
 msgid ""
 "A `line <@>`__ is a sequence of zero or more [characters] other than "
 "newline (``U+000A``) or carriage return (``U+000D``), followed by a [line"
 " ending] or by the end of file."
-msgstr ""
+msgstr "`行 <@>`__ はラインフィード(``U+000A``)とキャリッジリターン(``U+000D``)以外の0個以上の[文字]の連なりで、最後に[行終端]かファイルの終端が続きます。"
 
 #: ../../source/spec.rst:305
 msgid ""
 "A `line ending <@>`__ is a newline (``U+000A``), a carriage return "
 "(``U+000D``) not followed by a newline, or a carriage return and a "
 "following newline."
-msgstr ""
+msgstr "`行終端 <@>`__ はラインフィード(``U+000A``)と、ラインフィードが後ろにないキャリッジリターン(``U+000D``)、あるいはキャリッジリターンとラインフィード(CR+LF)のことです。"
 
 #: ../../source/spec.rst:309
 msgid ""
 "A line containing no characters, or a line containing only spaces "
 "(``U+0020``) or tabs (``U+0009``), is called a `blank line <@>`__."
-msgstr ""
+msgstr "行に文字が無いか、スペース(``U+0020``)かタブ(``U+0009``)しかない場合、`空行 <@>`__と呼びます。"
 
 #: ../../source/spec.rst:312
 msgid "The following definitions of character classes will be used in this spec:"
-msgstr ""
+msgstr "仕様では、次の文字種についての定義が使われます。"
 
 #: ../../source/spec.rst:315
 msgid ""
 "A `whitespace character <@>`__ is a space (``U+0020``), tab (``U+0009``),"
 " newline (``U+000A``), line tabulation (``U+000B``), form feed "
 "(``U+000C``), or carriage return (``U+000D``)."
-msgstr ""
+msgstr "`ホワイトスペース文字 <@>`__ とは、スペース(``U+0020``)、タブ(``U+0009``)、ラインフィード(``U+000A``)、垂直タブ(``U+000B``)、フォームフィード(``U+000C``)、キャリッジリターン(``U+000D``)のことを指します。"
 
 #: ../../source/spec.rst:319
 msgid "`Whitespace <@>`__ is a sequence of one or more [whitespace characters]."
-msgstr ""
+msgstr "`ホワイトスペース <@>`__ は、[ホワイトスペース文字]の1つ以上の連続です。"
 
 #: ../../source/spec.rst:321
 msgid ""
 "A `Unicode whitespace character <@>`__ is any code point in the Unicode "
 "``Zs`` general category, or a tab (``U+0009``), carriage return "
 "(``U+000D``), newline (``U+000A``), or form feed (``U+000C``)."
-msgstr ""
+msgstr "`Unicodeホワイトスペース文字 <@>`__ とは、Unicodeの ``Zs`` 一般カテゴリにあるコードポイントか、タブ(``U+0009``)、キャリッジリターン(``U+000D``)、ラインフィード(``U+000A``)、フォームフィード(``U+000C``)のことです。"
 
 #: ../../source/spec.rst:325
 msgid ""
 "`Unicode whitespace <@>`__ is a sequence of one or more [Unicode "
 "whitespace characters]."
-msgstr ""
+msgstr "`Unicodeホワイトスペース <@>`__ とは、[Unicodeホワイトスペース文字]の1つ以上の連続です。"
 
 #: ../../source/spec.rst:328
 msgid "A `space <@>`__ is ``U+0020``."
-msgstr ""
+msgstr "`スペース <@>`__ は、 ``U+0020`` のことです。"
 
 #: ../../source/spec.rst:330
 msgid ""
 "A `non-whitespace character <@>`__ is any character that is not a "
 "[whitespace character]."
-msgstr ""
+msgstr "`非ホワイトスペース文字 <@>`__ とは、[ホワイトスペース文字]ではない文字のことです。"
 
 #: ../../source/spec.rst:333
 msgid ""
@@ -343,39 +341,40 @@ msgid ""
 "``%``, ``&``, ``'``, ``(``, ``)``, ``*``, ``+``, ``,``, ``-``, ``.``, "
 "``/``, ``:``, ``;``, ``<``, ``=``, ``>``, ``?``, ``@``, ``[``, ``\\``, "
 "``]``, ``^``, ``_``, :literal:`\\``, ``{``, ``|``, ``}``, or ``~``."
-msgstr ""
+msgstr "`ASCII約物文字 <@>`__ とは、 ``!``, ``\"``, ``#``, ``$``, ``%``, ``&``, ``'``, ``(``, ``)``, ``*``, ``+``, ``,``, ``-``, ``.``, ``/``, ``:``, ``;``, ``<``, ``=``, ``>``, ``?``, ``@``, ``[``, ``\\``, ``]``, ``^``, ``_``, :literal:`\\``, ``{``, ``|``, ``}``, ``~`` のことです。"
 
 #: ../../source/spec.rst:338
 msgid ""
 "A `punctuation character <@>`__ is an [ASCII punctuation character] or "
 "anything in the general Unicode categories ``Pc``, ``Pd``, ``Pe``, "
 "``Pf``, ``Pi``, ``Po``, or ``Ps``."
-msgstr ""
+msgstr "`約物文字 <@>`__ とは、[ASCII約物文字]と、Unicode一般カテゴリの ``Pc``, ``Pd``, ``Pe``, ``Pf``, ``Pi``, ``Po``, ``Ps`` に属するものです。"
 
 #: ../../source/spec.rst:343
 msgid "Tabs"
-msgstr ""
+msgstr "タブ"
 
 #: ../../source/spec.rst:345
 msgid ""
 "Tabs in lines are not expanded to [spaces]. However, in contexts where "
 "whitespace helps to define block structure, tabs behave as if they were "
 "replaced by spaces with a tab stop of 4 characters."
-msgstr ""
+msgstr "行中のタブは[スペース]には展開されません。しかし、ホワイトスペースがブロック構造を定義するようなところでは、タブは4文字分のタブ位置をスペースで置換するように振舞います。"
 
 #: ../../source/spec.rst:349
 msgid ""
 "Thus, for example, a tab can be used instead of four spaces in an "
 "indented code block. (Note, however, that internal tabs are passed "
 "through as literal tabs, not expanded to spaces.)"
-msgstr ""
+msgstr "したがって、例えばあるタブを、インデントされたコードブロック中ではスペース4文字の代わりに使えます。(注意: しかし文中のタブはそのままタブとして扱われ、スペースには展開されません。)"
 
 #: ../../source/spec.rst:376
 msgid ""
 "In the following example, a continuation paragraph of a list item is "
 "indented with a tab; this has exactly the same effect as indentation with"
 " four spaces would:"
-msgstr ""
+msgstr "次の例では、リスト項目の続きの段落がタブでインデントされています。\n"
+"このときタブは、4つのスペースでインデントされたときと全く同じ働きをします。"
 
 #: ../../source/spec.rst:407
 msgid ""
@@ -386,21 +385,22 @@ msgid ""
 "delimiter, ``foo`` is considered to be indented six spaces inside the "
 "block quote context, so we get an indented code block starting with two "
 "spaces."
-msgstr ""
+msgstr "通常、 ``>`` というブロッククォートの始点は、スペースを後につけられ、これは文章の一部とはみなされません。``>`` の後にタブが続く場合は、タブが3つのスペースで置換されたように処理されます。これらのスペースのうち1つは、区切り文字の一部とみなされるため、``foo`` はブロッククォートの中で6つのスペースでインデントされていると考えられます。\n"
+"そのため、2つのスペースで始まるインデントされたコードブロックとなるのです。"
 
 #: ../../source/spec.rst:475
 msgid "Insecure characters"
-msgstr ""
+msgstr "不正な文字"
 
 #: ../../source/spec.rst:477
 msgid ""
 "For security reasons, the Unicode character ``U+0000`` must be replaced "
 "with the REPLACEMENT CHARACTER (``U+FFFD``)."
-msgstr ""
+msgstr "セキュリティ上の理由から、Unicode文字の ``U+0000`` は置換文字(``U+FFFD``)に置換されなければなりません。"
 
 #: ../../source/spec.rst:481
 msgid "Blocks and inlines"
-msgstr ""
+msgstr "ブロックとインライン"
 
 #: ../../source/spec.rst:483
 msgid ""
@@ -409,18 +409,19 @@ msgid ""
 "code blocks. Some blocks (like block quotes and list items) contain other"
 " blocks; others (like headings and paragraphs) contain `inline <@>`__ "
 "content---text, links, emphasized text, images, code spans, and so on."
-msgstr ""
+msgstr "ドキュメントは `ブロック <@>`__ の連続と考えることができます—段落や引用、リスト、見出し、rules、コードブロックといったものです。いくつかの(ブロッククォートやリスト項目など)ブロックは他のブロックを内包しています。\n"
+"その他の(見出しや段落)ブロックは `インライン <@>`__ コンテンツを含んでいます—テキスト、リンク、強調されたテキスト、画像、コードスパンなどです。"
 
 #: ../../source/spec.rst:491
 msgid "Precedence"
-msgstr ""
+msgstr "順位"
 
 #: ../../source/spec.rst:493
 msgid ""
 "Indicators of block structure always take precedence over indicators of "
 "inline structure. So, for example, the following is a list with two "
 "items, not a list with one item containing a code span:"
-msgstr ""
+msgstr "ブロック構造のインジケータ―は、インライン構造のインジケーターより常に優先します。つまり、例として次のリストは2つの項目を持ち、コードスパンを含んだ一つの項目を持つリストではありません。"
 
 #: ../../source/spec.rst:507
 msgid ""
@@ -432,31 +433,34 @@ msgid ""
 "Note that the first step requires processing lines in sequence, but the "
 "second can be parallelized, since the inline parsing of one block element"
 " does not affect the inline parsing of any other."
-msgstr ""
+msgstr "これはパースが2つのステップで行われていることを意味します。\n"
+"最初は文書中のブロック構造を識別し、次に段落や見出し、その他のブロック構造中の行をインライン構造にパースします。2番目のステップでは、最初のステップの終わりでのみ利用可能になる、リンクの参照定義についての情報が必要になります。気をつけておきたいのは、最初のステップでは行をシーケンシャルに処理する必要があるのに対し、2番目のステップでは、並列化できることです。\n"
+"これは、あるブロック中のインラインパースは、その他のインラインパースに影響を及ぼさないためです。"
 
 #: ../../source/spec.rst:517
 msgid "Container blocks and leaf blocks"
-msgstr ""
+msgstr "コンテナブロックと葉ブロック"
 
 #: ../../source/spec.rst:519
 msgid ""
 "We can divide blocks into two types: `container block <@>`__\\ s, which "
 "can contain other blocks, and `leaf block <@>`__\\ s, which cannot."
-msgstr ""
+msgstr "ブロックは2種類に分類されます。\n"
+" `コンテナブロック <@>`__\\ は他のブロックを包含することができますが、`葉ブロック <@>`__\\ ではできません。"
 
 #: ../../source/spec.rst:523
 msgid "Leaf blocks"
-msgstr ""
+msgstr "葉ブロック"
 
 #: ../../source/spec.rst:525
 msgid ""
 "This section describes the different kinds of leaf block that make up a "
 "Markdown document."
-msgstr ""
+msgstr "この章ではMarkdown文書を形作る異なる種類の葉ブロックについて示します。"
 
 #: ../../source/spec.rst:529
 msgid "Thematic breaks"
-msgstr ""
+msgstr "区切り線"
 
 #: ../../source/spec.rst:531
 msgid ""
@@ -464,53 +468,53 @@ msgid ""
 " three or more matching ``-``, ``_``, or ``*`` characters, each followed "
 "optionally by any number of spaces or tabs, forms a `thematic break "
 "<@>`__."
-msgstr ""
+msgstr "0-3個のスペースでできたインデントに、3つ以上の ``-`` 、``_`` または ``*`` の文字の連続があると、その間にどれだけスペースやタブが入っていても、`区切り線 <@>`__ を形成します。"
 
 #: ../../source/spec.rst:546
 msgid "Wrong characters:"
-msgstr ""
+msgstr "間違った文字の場合はこうなります。"
 
 #: ../../source/spec.rst:560
 msgid "Not enough characters:"
-msgstr ""
+msgstr "文字数が足りない場合は、"
 
 #: ../../source/spec.rst:572
 msgid "One to three spaces indent are allowed:"
-msgstr ""
+msgstr "1から3個のスペースによるインデントは許容されます。"
 
 #: ../../source/spec.rst:584
 msgid "Four spaces is too many:"
-msgstr ""
+msgstr "スペース4つは多すぎます。"
 
 #: ../../source/spec.rst:601
 msgid "More than three characters may be used:"
-msgstr ""
+msgstr "3文字以上の文字数でも使えます。"
 
 #: ../../source/spec.rst:609
 msgid "Spaces are allowed between the characters:"
-msgstr ""
+msgstr "スペースは文字の間に入っていてもいいです。"
 
 #: ../../source/spec.rst:629
 msgid "Spaces are allowed at the end:"
-msgstr ""
+msgstr "行末のスペースも許容されます。"
 
 #: ../../source/spec.rst:637
 msgid "However, no other characters may occur in the line:"
-msgstr ""
+msgstr "しかし、行中に他の文字を入れてはいけません。"
 
 #: ../../source/spec.rst:651
 msgid ""
 "It is required that all of the [non-whitespace characters] be the same. "
 "So, this is not a thematic break:"
-msgstr ""
+msgstr "全ての[非ホワイトスペース文字]は同じでなければなりません。したがって、次の例は区切り線にはなりません。"
 
 #: ../../source/spec.rst:660
 msgid "Thematic breaks do not need blank lines before or after:"
-msgstr ""
+msgstr "区切り線の前後には空行は要りません。"
 
 #: ../../source/spec.rst:676
 msgid "Thematic breaks can interrupt a paragraph:"
-msgstr ""
+msgstr "区切り線は段落を分割します。"
 
 #: ../../source/spec.rst:688
 msgid ""
@@ -519,21 +523,21 @@ msgid ""
 "the interpretation as a [setext heading] takes precedence. Thus, for "
 "example, this is a setext heading, not a paragraph followed by a thematic"
 " break:"
-msgstr ""
+msgstr "ダッシュの行が、[setext型見出し]のように解釈できるような場合は、[setext型見出し]として解釈されます。したがって、下の例はsetext型見出しとなり、区切り線がある単なる段落ではなくなるのです。"
 
 #: ../../source/spec.rst:703
 msgid ""
 "When both a thematic break and a list item are possible interpretations "
 "of a line, the thematic break takes precedence:"
-msgstr ""
+msgstr "区切り線とリスト項目のどちらにも解釈できる場合は、区切り線が優先されます。"
 
 #: ../../source/spec.rst:720
 msgid "If you want a thematic break in a list item, use a different bullet:"
-msgstr ""
+msgstr "リスト項目に区切り線を入れたい場合は、違う種類の行頭文字を使います。"
 
 #: ../../source/spec.rst:735
 msgid "ATX headings"
-msgstr ""
+msgstr "ATX型見出し"
 
 #: ../../source/spec.rst:737
 msgid ""
@@ -547,15 +551,16 @@ msgid ""
 "The raw contents of the heading are stripped of leading and trailing "
 "spaces before being parsed as inline content. The heading level is equal "
 "to the number of ``#`` characters in the opening sequence."
-msgstr ""
+msgstr "`ATX型見出し <@>`__ とは、エスケープされていない1-6個の ``#`` と自由に何個でも付け加えられる ``#`` にはさまれた文字列のことで、インラインコンテンツとしてパースされます。開始文字列の ``#`` の後には[スペース]か行の終わりが続かなければなりません。\n"
+"オプションでつけられる末尾の ``#`` は、必ず[スペース]の後から始まる必要があります。開始文字列の ``#`` は、0-3個のスペースでインデントしても構いません。行の初めと最後にあるスペースは、インラインコンテンツとしてパースする前に取り除かれます。見出しレベルは、開始文字列の ``#`` の数に等しいです。"
 
 #: ../../source/spec.rst:748
 msgid "Simple headings:"
-msgstr ""
+msgstr "シンプルな見出しを下に示します。"
 
 #: ../../source/spec.rst:766
 msgid "More than six ``#`` characters is not a heading:"
-msgstr ""
+msgstr "6つを超える ``#`` は見出しとはされません。"
 
 #: ../../source/spec.rst:774
 msgid ""
@@ -565,70 +570,70 @@ msgid ""
 "was required by the `original ATX implementation "
 "<http://www.aaronsw.com/2002/atx/atx.py>`__, and it helps prevent things "
 "like the following from being parsed as headings:"
-msgstr ""
+msgstr "``#`` と見出しの内容の間には最低でも1つ以上のスペースを入れるか、見出しが空である必要があります。多くの実装はスペースを必須とはしていないことに留意してください。ただし、スペースは`元々のATX実装 <http://www.aaronsw.com/2002/atx/atx.py>`__では必須であり、下の例のようなものを見出しとしてしまうことを防ぎます。"
 
 #: ../../source/spec.rst:790
 msgid "This is not a heading, because the first ``#`` is escaped:"
-msgstr ""
+msgstr "下の例は ``#`` がエスケープされているので、見出しにはなりません。"
 
 #: ../../source/spec.rst:798
 msgid "Contents are parsed as inlines:"
-msgstr ""
+msgstr "見出しの内容はインラインとしてパースされます。"
 
 #: ../../source/spec.rst:806
 msgid "Leading and trailing blanks are ignored in parsing inline content:"
-msgstr ""
+msgstr "インラインコンテンツをパースするときには前後の空白は無視されます。"
 
 #: ../../source/spec.rst:814
 msgid "One to three spaces indentation are allowed:"
-msgstr ""
+msgstr "1から3個のスペースによるインデントは許容されます。"
 
 #: ../../source/spec.rst:826
 msgid "Four spaces are too much:"
-msgstr ""
+msgstr "スペース4つは多すぎます。"
 
 #: ../../source/spec.rst:843
 msgid "A closing sequence of ``#`` characters is optional:"
-msgstr ""
+msgstr "``#`` を見出しの終わりに自由につけられます。"
 
 #: ../../source/spec.rst:853
 msgid "It need not be the same length as the opening sequence:"
-msgstr ""
+msgstr "開始文字列と同じ文字数でなければいけないわけではありません。"
 
 #: ../../source/spec.rst:863
 msgid "Spaces are allowed after the closing sequence:"
-msgstr ""
+msgstr "終わりの ``#`` の後にスペースを入れても構いません。\n"
 
 #: ../../source/spec.rst:871
 msgid ""
 "A sequence of ``#`` characters with anything but [spaces] following it is"
 " not a closing sequence, but counts as part of the contents of the "
 "heading:"
-msgstr ""
+msgstr "終わりの ``#`` の後に[スペース]以外の文字が来ると、そこまですべて見出しの内容として扱われます。"
 
 #: ../../source/spec.rst:881
 msgid "The closing sequence must be preceded by a space:"
-msgstr ""
+msgstr "終わりの ``#`` の前にはスペースがなければなりません。"
 
 #: ../../source/spec.rst:889
 msgid ""
 "Backslash-escaped ``#`` characters do not count as part of the closing "
 "sequence:"
-msgstr ""
+msgstr "バックスラッシュでエスケープされた ``#`` は終わりの ``#`` とは扱われません。"
 
 #: ../../source/spec.rst:902
 msgid ""
 "ATX headings need not be separated from surrounding content by blank "
 "lines, and they can interrupt paragraphs:"
-msgstr ""
+msgstr "ATX型見出しは前後を空行で囲う必要はなく、段落を分割します。"
 
 #: ../../source/spec.rst:925
 msgid "ATX headings can be empty:"
-msgstr ""
+msgstr "ATX型見出しは内容がなくてもいいです。"
 
 #: ../../source/spec.rst:938
 msgid "Setext headings"
-msgstr ""
+msgstr "Setext型見出し"
 
 #: ../../source/spec.rst:940
 msgid ""
@@ -640,7 +645,8 @@ msgid ""
 "interpretable as a [code fence], [ATX heading][ATX headings], [block "
 "quote][block quotes], [thematic break][thematic breaks], [list item][list"
 " items], or [HTML block][HTML blocks]."
-msgstr ""
+msgstr "`setext型見出し <@>`__ とは、1文字以上の[非ホワイトスペース文字]をそれぞれ含み、スペース3つ以下でインデントされている1行以上のテキストと、その後の行に[setext見出し線]が続くものを指します。テキストの行は、後にsetext見出し線がないときには、それらは単に段落とみなされるようなものでなくては行けません。\n"
+"すなわち、[コードフェンス]や[ATX型見出し][ATX型見出し]、[ブロッククォート][ブロッククォート]、[区切り線][区切り線]、[リスト項目][リスト項目]、[HTMLブロック][HTMLブロック]となるようなものは使えません。"
 
 #: ../../source/spec.rst:949
 msgid ""
@@ -649,7 +655,7 @@ msgid ""
 " any number of trailing spaces. If a line containing a single ``-`` can "
 "be interpreted as an empty [list items], it should be interpreted this "
 "way and not as a [setext heading underline]."
-msgstr ""
+msgstr "`setext見出し線 <@>`__ とは、 ``=`` か ``-`` が連続する文字列に、スペース3つ以下のインデントと後続の0字以上のスペースからなります。ただ一つの ``-`` を含む行が、空の[リスト項目]と解釈されるような場合は、[setext見出し線]とは解釈されません。"
 
 #: ../../source/spec.rst:955
 msgid ""
@@ -657,154 +663,154 @@ msgid ""
 "[setext heading underline], and a level 2 heading if ``-`` characters are"
 " used. The contents of the heading are the result of parsing the "
 "preceding lines of text as CommonMark inline content."
-msgstr ""
+msgstr "``=`` を[setext見出し線]に使用しているときは、見出しのレベルは1となり、``-`` を使用しているときはレベル2の見出しとなります。見出しの内容は、CommonMarkインラインコンテンツとして、見出し線の前の行をパースした結果が使われます。"
 
 #: ../../source/spec.rst:960
 msgid ""
 "In general, a setext heading need not be preceded or followed by a blank "
 "line. However, it cannot interrupt a paragraph, so when a setext heading "
 "comes after a paragraph, a blank line is needed between them."
-msgstr ""
+msgstr "一般的に、setext型見出しはその前にも後にも空行を必要とはしていません。しかしながら、この見出しは段落を分割しないので、setext見出しが段落の後に来る場合は、それらとの間に空行が必要となります。"
 
 #: ../../source/spec.rst:964
 msgid "Simple examples:"
-msgstr ""
+msgstr "簡単な例を示します。"
 
 #: ../../source/spec.rst:977
 msgid "The content of the header may span more than one line:"
-msgstr ""
+msgstr "見出しの内容は複数行に渡っても構いません。"
 
 #: ../../source/spec.rst:988
 msgid "The underlining can be any length:"
-msgstr ""
+msgstr "見出し線の長さは自由です。"
 
 #: ../../source/spec.rst:1001
 msgid ""
 "The heading content can be indented up to three spaces, and need not line"
 " up with the underlining:"
-msgstr ""
+msgstr "見出しの内容はスペース3つ分までインデントでき、このとき見出し線も一緒にインデントする必要はありません。"
 
 #: ../../source/spec.rst:1019
 msgid "Four spaces indent is too much:"
-msgstr ""
+msgstr "スペース4つは多すぎます。"
 
 #: ../../source/spec.rst:1036
 msgid ""
 "The setext heading underline can be indented up to three spaces, and may "
 "have trailing spaces:"
-msgstr ""
+msgstr "setext見出し線はスペース3つまでインデントでき、その後にいくらでもスペースをつけられます。"
 
 #: ../../source/spec.rst:1046
 msgid "Four spaces is too much:"
-msgstr ""
+msgstr "スペース4つは多すぎます。"
 
 #: ../../source/spec.rst:1056
 msgid "The setext heading underline cannot contain internal spaces:"
-msgstr ""
+msgstr "setext見出し線は、その線の中にスペースを入れてはいけません。"
 
 #: ../../source/spec.rst:1071
 msgid "Trailing spaces in the content line do not cause a line break:"
-msgstr ""
+msgstr "見出しの後のスペースは、改行として作用することはありません。"
 
 #: ../../source/spec.rst:1080
 msgid "Nor does a backslash at the end:"
-msgstr ""
+msgstr "行末のバックスラッシュも同様に作用しません。"
 
 #: ../../source/spec.rst:1089
 msgid ""
 "Since indicators of block structure take precedence over indicators of "
 "inline structure, the following are setext headings:"
-msgstr ""
+msgstr "ブロック構造の作用素よりインライン構造の作用素の方が優先するため、下の例はsetext型見出しとなります。"
 
 #: ../../source/spec.rst:1107
 msgid ""
 "The setext heading underline cannot be a [lazy continuation line] in a "
 "list item or block quote:"
-msgstr ""
+msgstr "setext見出し線はブロッククォートやリスト項目の中の[lazy continuation line]にはなりません。"
 
 #: ../../source/spec.rst:1142
 msgid ""
 "A blank line is needed between a paragraph and a following setext "
 "heading, since otherwise the paragraph becomes part of the heading's "
 "content:"
-msgstr ""
+msgstr "段落と、それに続くsetext見出しの間には空行が必要です。さもなければ、段落は見出しの一部となってしまいます。"
 
 #: ../../source/spec.rst:1155
 msgid ""
 "But in general a blank line is not required before or after setext "
 "headings:"
-msgstr ""
+msgstr "ただし、通常はsetext型見出しの前後には空行は必要ありません。"
 
 #: ../../source/spec.rst:1172
 msgid "Setext headings cannot be empty:"
-msgstr ""
+msgstr "setext型見出しは空にはできません。"
 
 #: ../../source/spec.rst:1181
 msgid ""
 "Setext heading text lines must not be interpretable as block constructs "
 "other than paragraphs. So, the line of dashes in these examples gets "
 "interpreted as a thematic break:"
-msgstr ""
+msgstr "setext見出しのテキストは、段落以外のブロック構造として解釈されてはいけません。そのため、下の例の ``-`` の連続は、単に区切り線として解釈されます。"
 
 #: ../../source/spec.rst:1222
 msgid ""
 "If you want a heading with ``> foo`` as its literal text, you can use "
 "backslash escapes:"
-msgstr ""
+msgstr "見出しに ``> foo`` とそのまま入れたい場合は、バックスラッシュでエスケープします。"
 
 #: ../../source/spec.rst:1232
 msgid ""
 "**Compatibility note:** Most existing Markdown implementations do not "
 "allow the text of setext headings to span multiple lines. But there is no"
 " consensus about how to interpret"
-msgstr ""
+msgstr "**互換性のための注意事項:** 既存のMarkdown実装のほとんどは、複数行にわたるsetext見出しのテキストを許容していません。しかし、どのように解釈すべきかというコンセンサスもありません。"
 
 #: ../../source/spec.rst:1243
 msgid "One can find four different interpretations:"
-msgstr ""
+msgstr "4つの異なる解釈があります:"
 
 #: ../../source/spec.rst:1245
 msgid "paragraph \"Foo\", heading \"bar\", paragraph \"baz\""
-msgstr ""
+msgstr "段落の\"Foo\"、見出しの\"bar\"、段落の\"baz\""
 
 #: ../../source/spec.rst:1246
 msgid "paragraph \"Foo bar\", thematic break, paragraph \"baz\""
-msgstr ""
+msgstr "段落の\"Foo bar\"、区切り線、段落の\"baz\""
 
 #: ../../source/spec.rst:1247
 msgid "paragraph \"Foo bar --- baz\""
-msgstr ""
+msgstr "段落の\"Foo bar --- baz\""
 
 #: ../../source/spec.rst:1248
 msgid "heading \"Foo bar\", paragraph \"baz\""
-msgstr ""
+msgstr "見出しの\"Foo bar\"、段落の\"baz\""
 
 #: ../../source/spec.rst:1250
 msgid ""
 "We find interpretation 4 most natural, and interpretation 4 increases the"
 " expressive power of CommonMark, by allowing multiline headings. Authors "
 "who want interpretation 1 can put a blank line after the first paragraph:"
-msgstr ""
+msgstr "4番目の解釈が最も自然であり、このように複数行の見出しを許容することでCommonMarkの表現力が増すと分かりました。1番目の解釈を求める著者は、最初の段落の後に空行を入れればよいです。"
 
 #: ../../source/spec.rst:1267
 msgid ""
 "Authors who want interpretation 2 can put blank lines around the thematic"
 " break,"
-msgstr ""
+msgstr "2番目の解釈を求める著者は、区切り線の前後に空行を入れればよいです。"
 
 #: ../../source/spec.rst:1284
 msgid ""
 "or use a thematic break that cannot count as a [setext heading "
 "underline], such as"
-msgstr ""
+msgstr "あるいは下のように、[setext区切り線]にならない区切り線を使うことです。"
 
 #: ../../source/spec.rst:1299
 msgid "Authors who want interpretation 3 can use backslash escapes:"
-msgstr ""
+msgstr "3番目の解釈を求める著者はバックスラッシュによるエスケープを使えます。"
 
 #: ../../source/spec.rst:1314
 msgid "Indented code blocks"
-msgstr ""
+msgstr "インデントされたコードブロック"
 
 #: ../../source/spec.rst:1316
 msgid ""
@@ -814,7 +820,7 @@ msgid ""
 "the code block are the literal contents of the lines, including trailing "
 "[line endings], minus four spaces of indentation. An indented code block "
 "has no [info string]."
-msgstr ""
+msgstr "`インデントされたコードブロック <@>`__ は空行で挟まれた、1行以上の[インデントされた文章]により成ります。`インデントされた文章 <@>`__ は4つ以上のスペースでそれぞれインデントされた空行以外の文字列のことです。コードブロックの内容は行中の文字列であり、これは[行終端]を含み、インデントのためのスペース4つを除いたものです。インデントされたコードブロックは[情報文字列]を持ちません。"
 
 #: ../../source/spec.rst:1323
 msgid ""
@@ -822,67 +828,67 @@ msgid ""
 "blank line between a paragraph and a following indented code block. (A "
 "blank line is not needed, however, between a code block and a following "
 "paragraph.)"
-msgstr ""
+msgstr "インデントされたコードブロックは段落を分割しないので、段落とそれに続くコードブロックの間には空行が必要です。(コードブロックとそれに続く段落の間には空行は必要ありません。)"
 
 #: ../../source/spec.rst:1337
 msgid ""
 "If there is any ambiguity between an interpretation of indentation as a "
 "code block and as indicating that material belongs to a [list item][list "
 "items], the list item interpretation takes precedence:"
-msgstr ""
+msgstr "コードブロックなのか、[リスト項目]に属するものなのか、インデントの解釈に曖昧さが残る場合は、リスト項目の解釈が優先されます。"
 
 #: ../../source/spec.rst:1369
 msgid ""
 "The contents of a code block are literal text, and do not get parsed as "
 "Markdown:"
-msgstr ""
+msgstr "コードブロックの内容は単なるテキストで、Markdownとしてパースはされません。"
 
 #: ../../source/spec.rst:1385
 msgid "Here we have three chunks separated by blank lines:"
-msgstr ""
+msgstr "これは空行で挟まれた3つの文章になります。"
 
 #: ../../source/spec.rst:1406
 msgid ""
 "Any initial spaces beyond four will be included in the content, even in "
 "interior blank lines:"
-msgstr ""
+msgstr "4個を超えるはじめのスペースは、たとえ空行であってもコードブロックの内容となります。"
 
 #: ../../source/spec.rst:1420
 msgid ""
 "An indented code block cannot interrupt a paragraph. (This allows hanging"
 " indents and the like.)"
-msgstr ""
+msgstr "インデントされたコードブロックは段落を分割しません。（これは文章中のぶら下げインデントとなります。）"
 
 #: ../../source/spec.rst:1432
 msgid ""
 "However, any non-blank line with fewer than four leading spaces ends the "
 "code block immediately. So a paragraph may occur immediately after "
 "indented code:"
-msgstr ""
+msgstr "しかし、4つ未満のスペースから始まる非空行はコードブロックを即座に打ち切ります。つまり、段落はインデントされたコードブロックの直後から始められます。"
 
 #: ../../source/spec.rst:1445
 msgid ""
 "And indented code can occur immediately before and after other kinds of "
 "blocks:"
-msgstr ""
+msgstr "さらに、インデントされたコードブロックは他のブロックの直前あるいは直後から始められます。"
 
 #: ../../source/spec.rst:1465
 msgid "The first line can be indented more than four spaces:"
-msgstr ""
+msgstr "最初の行は4つ以上のスペースでインデントできます。"
 
 #: ../../source/spec.rst:1476
 msgid ""
 "Blank lines preceding or following an indented code block are not "
 "included in it:"
-msgstr ""
+msgstr "インデントされたコードブロックの前後の空行は無視されます。"
 
 #: ../../source/spec.rst:1490
 msgid "Trailing spaces are included in the code block's content:"
-msgstr ""
+msgstr "文章の末尾のスペースも、コードブロックの内容とはなりません。"
 
 #: ../../source/spec.rst:1500
 msgid "Fenced code blocks"
-msgstr ""
+msgstr "囲われたコードブロック"
 
 #: ../../source/spec.rst:1502
 msgid ""
@@ -890,7 +896,7 @@ msgid ""
 " characters (:literal:`\\``) or tildes (``~``). (Tildes and backticks "
 "cannot be mixed.) A `fenced code block <@>`__ begins with a code fence, "
 "indented no more than three spaces."
-msgstr ""
+msgstr "`コードフェンス <@>`__ とはバッククォート(:literal:`\\``)かチルダ(``~``)が3つ以上連続した文字列です。（チルダとバッククォートを混合して使うことはできません。）`囲われたコードブロック <@>`__ はコードフェンスから始まり、3個以内のスペースでインデントされたものです。"
 
 #: ../../source/spec.rst:1507
 msgid ""
@@ -900,7 +906,8 @@ msgid ""
 "contain any backtick characters. (The reason for this restriction is that"
 " otherwise some inline code would be incorrectly interpreted as the "
 "beginning of a fenced code block.)"
-msgstr ""
+msgstr "開始コードフェンスの行には、コードフェンスの後にテキストをつけられます。\n"
+"その前後のホワイトスペースを除いた文字列を`情報文字列 <@>`__ といいます。[情報文字列]は、そのなかにバッククォートを含んではいけません。（この制限の理由は、そうしないとインラインコードが囲われたコードブロックの始まりとして不正に解釈されるおそれがあるからです。）"
 
 #: ../../source/spec.rst:1514
 msgid ""
@@ -912,7 +919,7 @@ msgid ""
 "content (if present). (If a content line is not indented, it is preserved"
 " unchanged. If it is indented less than N spaces, all of the indentation "
 "is removed.)"
-msgstr ""
+msgstr "コードブロックの内容は、開始コードフェンスと同じ種類の終了[コードフェンス]までの連続するすべての行からなり、終止コードフェンスの文字数は開始のそれと最低でも同じ数です。開始コードフェンスがN個のスペースでインデントされているならば、各行のインデントから（もしあれば）スペースN個ぶんを削除します。(コード行がインデントされていない場合は、特に変化はありません。インデントがN個未満である場合は、すべてのインデントが削除されます。)"
 
 #: ../../source/spec.rst:1523
 msgid ""
@@ -924,13 +931,13 @@ msgid ""
 " would require backtracking in the event that a closing code fence is not"
 " found. But this makes parsing much less efficient, and there seems to be"
 " no real down side to the behavior described here.)"
-msgstr ""
+msgstr "終止コードフェンスはスペース3つ分までインデントでき、無視されますがスペースを後に続けることができます。内容ブロック（または文書）の終わりがあり、終止コードフェンスがないときは、コードブロックの内容は開始コードブロック後から内容ブロック（または文書）の終わりまでとなります。(その他の仕様は、終了コードブロックが見つからないイベントを撤回することを求めるでしょう。しかし、これはパースを非効率にしてしまい、ここに記したような振る舞いが非現実的なものになってしまいます。)"
 
 #: ../../source/spec.rst:1532
 msgid ""
 "A fenced code block may interrupt a paragraph, and does not require a "
 "blank line either before or after."
-msgstr ""
+msgstr "囲われたコードブロックは段落を分割するので、前後に空行は必要ありません。"
 
 #: ../../source/spec.rst:1535
 msgid ""
@@ -939,77 +946,77 @@ msgid ""
 " the language of the code sample, and rendered in the ``class`` attribute"
 " of the ``code`` tag. However, this spec does not mandate any particular "
 "treatment of the [info string]."
-msgstr ""
+msgstr "コードフェンスの内容はそのままのテキストとして扱われ、インラインとしてパースされません。[情報文字列]の最初の語は、たいていコードのサンプルがどの言語なのか示すのに使われ、 ``code`` タグの ``class`` 属性として追加されます。しかし、本仕様では[情報文字列]のどのような処理も必須とはしません。"
 
 #: ../../source/spec.rst:1541
 msgid "Here is a simple example with backticks:"
-msgstr ""
+msgstr "バッククォートを用いた簡単な例を示します。"
 
 #: ../../source/spec.rst:1554
 msgid "With tildes:"
-msgstr ""
+msgstr "こちらはチルダの例です。"
 
 #: ../../source/spec.rst:1567
 msgid "Fewer than three backticks is not enough:"
-msgstr ""
+msgstr "バッククォート3つ未満は十分ではありません。"
 
 #: ../../source/spec.rst:1577
 msgid "The closing code fence must use the same character as the opening fence:"
-msgstr ""
+msgstr "終止コードフェンスは開始コードフェンスと同じ文字でなければなりません。"
 
 #: ../../source/spec.rst:1601
 msgid "The closing code fence must be at least as long as the opening fence:"
-msgstr ""
+msgstr "終止コードフェンスは開始コードフェンスと同じかそれ以上の文字数でなければなりません。"
 
 #: ../../source/spec.rst:1625
 msgid ""
 "Unclosed code blocks are closed by the end of the document (or the "
 "enclosing [block quote][block quotes] or [list item][list items]):"
-msgstr ""
+msgstr "閉じられていないコードブロックは、文書の終わりで閉じられます。(あるいは[ブロッククォート]または[リスト項目]により閉じられます。)"
 
 #: ../../source/spec.rst:1659
 msgid "A code block can have all empty lines as its content:"
-msgstr ""
+msgstr "コードブロックは全てが空行の内容でも構いません。"
 
 #: ../../source/spec.rst:1672
 msgid "A code block can be empty:"
-msgstr ""
+msgstr "コードブロックは中身がなくても構いません。"
 
 #: ../../source/spec.rst:1681
 msgid ""
 "Fences can be indented. If the opening fence is indented, content lines "
 "will have equivalent opening indentation removed, if present:"
-msgstr ""
+msgstr "コードフェンスはインデントできます。開始コードフェンスがインデントされている場合、内容の行は、初めのインデントと同じだけのインデントがもしあれば削除されます。"
 
 #: ../../source/spec.rst:1721
 msgid "Four spaces indentation produces an indented code block:"
-msgstr ""
+msgstr "スペース4つのインデントはインデントされたコードブロックとなります。"
 
 #: ../../source/spec.rst:1734
 msgid ""
 "Closing fences may be indented by 0-3 spaces, and their indentation need "
 "not match that of the opening fence:"
-msgstr ""
+msgstr "終止コードフェンスは0-3個のスペースでインデントでき、開始コードフェンスのインデントと合わせる必要はないです。"
 
 #: ../../source/spec.rst:1755
 msgid "This is not a closing fence, because it is indented 4 spaces:"
-msgstr ""
+msgstr "下の例はインデントにスペース4つを使っているため、終止コードフェンスではありません。"
 
 #: ../../source/spec.rst:1767
 msgid "Code fences (opening and closing) cannot contain internal spaces:"
-msgstr ""
+msgstr "(開始と終止)コードフェンスは、間のスペースをコードに入れられません。"
 
 #: ../../source/spec.rst:1787
 msgid ""
 "Fenced code blocks can interrupt paragraphs, and can be followed directly"
 " by paragraphs, without a blank line between:"
-msgstr ""
+msgstr "囲われたコードブロックは段落を分割でき、その直後から空行を挟むことなく段落を始められます。"
 
 #: ../../source/spec.rst:1803
 msgid ""
 "Other blocks can also occur before and after fenced code blocks without "
 "an intervening blank line:"
-msgstr ""
+msgstr "そのほかのブロックも空行を挟むことなく、囲われたコードブロックの直前あるいは直後に続けることができます。"
 
 #: ../../source/spec.rst:1820
 msgid ""
@@ -1017,15 +1024,15 @@ msgid ""
 "and closing spaces will be stripped, and the first word, prefixed with "
 "``language-``, is used as the value for the ``class`` attribute of the "
 "``code`` element within the enclosing ``pre`` element."
-msgstr ""
+msgstr "[情報文字列]を開始コードフェンスの後に付け加えられます。情報文字列の始めと終わりのスペースは除去され、最初の語は ``language-`` という接頭語をつけて、 ``pre`` 要素直後の ``code`` 要素に付与される ``class`` 属性の値となります。"
 
 #: ../../source/spec.rst:1858
 msgid "[Info strings] for backtick code blocks cannot contain backticks:"
-msgstr ""
+msgstr "[情報文字列]にはバッククォートは使用できません。"
 
 #: ../../source/spec.rst:1868
 msgid "Closing code fences cannot have [info strings]:"
-msgstr ""
+msgstr "終止コードフェンスには、[情報文字列]をつけることはできません。"
 
 #: ../../source/spec.rst:1880
 msgid "HTML blocks"
