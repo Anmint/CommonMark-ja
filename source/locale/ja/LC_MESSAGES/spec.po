@@ -1388,7 +1388,7 @@ msgstr "幸運なことに、空白行は通常必要なく、削除可能です
 
 #: ../../source/spec.rst:2604
 msgid "Link reference definitions"
-msgstr ""
+msgstr "リンク参照定義"
 
 #: ../../source/spec.rst:2606
 msgid ""
@@ -1399,7 +1399,7 @@ msgid ""
 "title], which if it is present must be separated from the [link "
 "destination] by [whitespace]. No further [non-whitespace characters] may "
 "occur on the line."
-msgstr ""
+msgstr "`リンク参照定義 <@>`__ はスペース3個までのインデントの後の[リンクラベル]にコロン(``:``)を続け、任意の[ホワイトスペース] (1つの[行終端]を含む)、[リンク先]、任意の[ホワイトスペース] (1つの[行終端]を含む)、任意の[リンクタイトル]からなり、リンクタイトルがある場合は[ホワイトスペース]によって[リンク先]から離されていなければなりません。そのほかの[非ホワイトスペース文字]はこの行にあってはいけません。"
 
 #: ../../source/spec.rst:2614
 msgid ""
@@ -1408,98 +1408,98 @@ msgid ""
 "[reference links] and reference-style [images] elsewhere in the document."
 " [Link reference definitions] can come either before or after the links "
 "that use them."
-msgstr ""
+msgstr "[リンク参照定義]は文書の構造要素とは何ら関連しません。代わりに、文書のどこにでも使える[参照リンク]や参照形式の[画像]に使われるラベルを定義します。[リンク参照定義]は定義が使用されているリンクの前でも後でも書くことができます。"
 
 #: ../../source/spec.rst:2656
 msgid "The title may extend over multiple lines:"
-msgstr ""
+msgstr "タイトルは複数行にわたってもかまいません。"
 
 #: ../../source/spec.rst:2674
 msgid "However, it may not contain a [blank line]:"
-msgstr ""
+msgstr "ただし、[空白行]は使えません。"
 
 #: ../../source/spec.rst:2688 ../../source/spec.rst:6796
 msgid "The title may be omitted:"
-msgstr ""
+msgstr "タイトルは省略できます。"
 
 #: ../../source/spec.rst:2699
 msgid "The link destination may not be omitted:"
-msgstr ""
+msgstr "リンク先は省略できません。"
 
 #: ../../source/spec.rst:2710
 msgid ""
 "Both title and destination can contain backslash escapes and literal "
 "backslashes:"
-msgstr ""
+msgstr "タイトルとリンク先の両方ともバックスラッシュによるエスケープとバックスラッシュ自身を含めることができます。"
 
 #: ../../source/spec.rst:2721
 msgid "A link can come before its corresponding definition:"
-msgstr ""
+msgstr "リンクは、それに関わる定義の前に書くことができます。"
 
 #: ../../source/spec.rst:2731
 msgid "If there are several matching definitions, the first one takes precedence:"
-msgstr ""
+msgstr "複数の定義がマッチする場合は、一番最初のものが優先されます。"
 
 #: ../../source/spec.rst:2743
 msgid ""
 "As noted in the section on [Links], matching of labels is case-"
 "insensitive (see [matches])."
-msgstr ""
+msgstr "[リンク]で注記するように、ラベルは大小文字に関係なくマッチします([マッチ]を参照)。"
 
 #: ../../source/spec.rst:2762
 msgid ""
 "Here is a link reference definition with no corresponding link. It "
 "contributes nothing to the document."
-msgstr ""
+msgstr "これは参照するリンクのないリンク参照定義です。これは文書に何も及ぼしません。"
 
 #: ../../source/spec.rst:2770
 msgid "Here is another one:"
-msgstr ""
+msgstr "他の例を示します。"
 
 #: ../../source/spec.rst:2781
 msgid ""
 "This is not a link reference definition, because there are [non-"
 "whitespace characters] after the title:"
-msgstr ""
+msgstr "これはタイトルの後に[非ホワイトスペース文字]があるため、リンク参照定義とはなりません。"
 
 #: ../../source/spec.rst:2790
 msgid "This is a link reference definition, but it has no title:"
-msgstr ""
+msgstr "これはリンク参照定義ですが、タイトルはありません。"
 
 #: ../../source/spec.rst:2799
 msgid ""
 "This is not a link reference definition, because it is indented four "
 "spaces:"
-msgstr ""
+msgstr "これは4個のスペースでインデントされているので、リンク参照定義とはなりません。"
 
 #: ../../source/spec.rst:2812
 msgid ""
 "This is not a link reference definition, because it occurs inside a code "
 "block:"
-msgstr ""
+msgstr "これはコードブロックとなるので、リンク参照定義とはなりません。"
 
 #: ../../source/spec.rst:2827
 msgid "A [link reference definition] cannot interrupt a paragraph."
-msgstr ""
+msgstr "[リンク参照定義]は段落を分割しません。"
 
 #: ../../source/spec.rst:2840
 msgid ""
 "However, it can directly follow other block elements, such as headings "
 "and thematic breaks, and it need not be followed by a blank line."
-msgstr ""
+msgstr "しかし、見出しや区切り線といったほかのブロック要素の直後にある場合、空行を前もって入れる必要はありません。"
 
 #: ../../source/spec.rst:2854
 msgid ""
 "Several [link reference definitions] can occur one after another, without"
 " intervening blank lines."
-msgstr ""
+msgstr "複数の[リンク参照定義]を、空白行を挟むことなく続けて書くことができます。"
 
 #: ../../source/spec.rst:2872
 msgid ""
 "[Link reference definitions] can occur inside block containers, like "
 "lists and block quotations. They affect the entire document, not just the"
 " container in which they are defined:"
-msgstr ""
+msgstr "[リンク参照定義]はリストやブロッククォートのようなブロックコンテナの中に記述できます。 これらは定義したコンテナだけでなく、文書全体に影響します。"
 
 #: ../../source/spec.rst:2887
 msgid "Paragraphs"
