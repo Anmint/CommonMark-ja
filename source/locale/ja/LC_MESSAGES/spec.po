@@ -1036,13 +1036,13 @@ msgstr "終止コードフェンスには、[情報文字列]をつけること�
 
 #: ../../source/spec.rst:1880
 msgid "HTML blocks"
-msgstr ""
+msgstr "HTMLブロック"
 
 #: ../../source/spec.rst:1882
 msgid ""
 "An `HTML block <@>`__ is a group of lines that is treated as raw HTML "
 "(and will not be escaped in HTML output)."
-msgstr ""
+msgstr "`HTMLブロック <@>`__ 素のHTMLとして処理される行(とHTMLの出力にエスケープされないもの)の集まりです。"
 
 #: ../../source/spec.rst:1885
 msgid ""
@@ -1054,7 +1054,7 @@ msgid ""
 "block]), if no line is encountered that meets the [end condition]. If the"
 " first line meets both the [start condition] and the [end condition], the"
 " block will contain just that line."
-msgstr ""
+msgstr "7種類の[HTMLブロック]があり、開始と終了状態により定義されます。ブロックは(3スペースまでの任意のインデントをもつ) `開始状態 <@>`__ となる行から始まります。これは `終了状態 <@>`__に合致する行、あるいは[終了状態]がない場合は文書の最終行、他の[コンテナブロック]まで続きます。一番最初の行に[開始状態]と[終了状態]がある場合は、ブロックはこの行だけを含みます。"
 
 #: ../../source/spec.rst:1894
 msgid ""
@@ -1063,32 +1063,32 @@ msgid ""
 "``>``, or the end of the line.\\\\ **End condition:** line contains an "
 "end tag ``</script>``, ``</pre>``, or ``</style>`` (case-insensitive; it "
 "need not match the start tag)."
-msgstr ""
+msgstr "**開始状態:** 次の ``<script``, ``<pre``, あるいは ``<style`` (大小文字は関係ありません)という文字列から始まり、 ホワイトスペース、 ``>``あるいは行末で終わる行であり、\\\\ **終了状態:** 次の終了タグで終わる行のこと： ``</script>``, ``</pre>``, あるいは ``</style>`` (大小文字は関係なく、開始タグと合致している必要はありません)。"
 
 #: ../../source/spec.rst:1900
 msgid ""
 "**Start condition:** line begins with the string ``<!--``.\\\\ **End "
 "condition:** line contains the string ``-->``."
-msgstr ""
+msgstr "**開始状態:** ``<!--``で始まる行で、\\\\ **終了状態:** ``-->``で終わる行のこと。"
 
 #: ../../source/spec.rst:1903
 msgid ""
 "**Start condition:** line begins with the string ``<?``.\\\\ **End "
 "condition:** line contains the string ``?>``."
-msgstr ""
+msgstr "**開始状態:** ``<?``で始まる行で、\\\\ **終了状態:** ``?>``で終わる行のこと。"
 
 #: ../../source/spec.rst:1906
 msgid ""
 "**Start condition:** line begins with the string ``<!`` followed by an "
 "uppercase ASCII letter.\\\\ **End condition:** line contains the "
 "character ``>``."
-msgstr ""
+msgstr "**開始状態:** ``<!``の後にASCII大文字が続く行で、\\\\ **終了状態:** ``>``で終わる行のこと。"
 
 #: ../../source/spec.rst:1910
 msgid ""
 "**Start condition:** line begins with the string ``<![CDATA[``.\\\\ **End"
 " condition:** line contains the string ``]]>``."
-msgstr ""
+msgstr "**開始状態:** ``<![CDATA[``で始まる行で、\\\\ **終了状態:** ``]]>``で終わる行のこと。"
 
 #: ../../source/spec.rst:1913
 msgid ""
@@ -1106,7 +1106,7 @@ msgid ""
 "``track``, ``ul``, followed by [whitespace], the end of the line, the "
 "string ``>``, or the string ``/>``.\\\\ **End condition:** line is "
 "followed by a [blank line]."
-msgstr ""
+msgstr "**開始状態:** ``<`` か ``</``の後、``address``, ``article``, ``aside``, ``base``, ``basefont``, ``blockquote``, ``body``, ``caption``, ``center``, ``col``, ``colgroup``, ``dd``, ``details``, ``dialog``, ``dir``, ``div``, ``dl``, ``dt``, ``fieldset``, ``figcaption``, ``figure``, ``footer``, ``form``, ``frame``, ``frameset``, ``h1``, ``h2``, ``h3``, ``h4``, ``h5``, ``h6``, ``head``, ``header``, ``hr``, ``html``, ``iframe``, ``legend``, ``li``, ``link``, ``main``, ``menu``, ``menuitem``, ``nav``, ``noframes``, ``ol``, ``optgroup``, ``option``, ``p``, ``param``, ``section``, ``source``, ``summary``, ``table``, ``tbody``, ``td``, ``tfoot``, ``th``, ``thead``, ``title``, ``tr``, ``track``, ``ul``の内どれかが大文字小文字関係なく続き、[ホワイトスペース]、行末、``>``のいずれかで終わる行で、\\\\ **終了状態:** [空白行]が続く行のこと。"
 
 #: ../../source/spec.rst:1929
 msgid ""
@@ -1114,7 +1114,7 @@ msgid ""
 "tag] (with any [tag name] other than ``script``, ``style``, or ``pre``) "
 "followed only by [whitespace] or the end of the line.\\\\ **End "
 "condition:** line is followed by a [blank line]."
-msgstr ""
+msgstr "**開始状態:** 完全な (``script``, ``style``, ``pre`` 以外の[タグ名]の) [開始タグ] または [終止タグ]に[ホワイトスペース]か行末が続く行で、\\\\ **終了状態:** [空白行]が続く行のこと。"
 
 #: ../../source/spec.rst:1934
 msgid ""
@@ -1123,21 +1123,21 @@ msgid ""
 "This means any HTML **within an HTML block** that might otherwise be "
 "recognised as a start condition will be ignored by the parser and passed "
 "through as-is, without changing the parser's state."
-msgstr ""
+msgstr "HTMLブロックは、適切な[終了状態]によって閉じられるか、文書の最終行、他の[コンテナブロック]が来るまで続きます。つまり、 開始状態とみなされるもの以外の **HTMLブロックの中の** HTMLはパーサから無視されて、パーサの状態を変えることなくそのままスルーされます。"
 
 #: ../../source/spec.rst:1940
 msgid ""
 "For instance, ``<pre>`` within a HTML block started by ``<table>`` will "
 "not affect the parser state; as the HTML block was started in by start "
 "condition 6, it will end at any blank line. This can be surprising:"
-msgstr ""
+msgstr "例えば、``<table>`` から始まるHTMLブロック中の ``<pre>`` はパーサの状態に影響を及ぼしません。HTMLブロックは開始状態6により始まり、空白行が来るまで続くからです。次の例は驚くかもしれません。"
 
 #: ../../source/spec.rst:1961
 msgid ""
 "In this case, the HTML block is terminated by the newline — the "
 "``**Hello**`` text remains verbatim — and regular parsing resumes, with a"
 " paragraph, emphasised ``world`` and inline and block HTML following."
-msgstr ""
+msgstr "この場合、HTMLブロックは空白行で終了します― ``**Hello**`` はそのまま残ります―そして通常のパースが行われて段落が始まり、``world`` が強調されて、インライン及びHTMLブロックが続きます。"
 
 #: ../../source/spec.rst:1965
 msgid ""
@@ -1145,43 +1145,43 @@ msgid ""
 "Blocks of type 7 may not interrupt a paragraph. (This restriction is "
 "intended to prevent unwanted interpretation of long tags inside a wrapped"
 " paragraph as starting HTML blocks.)"
-msgstr ""
+msgstr "タイプ7以外のすべての[HTMLブロック]は、段落を分割します。タイプ7だけは段落を分割しません。(この制限は、HTMLブロックのはじまりとしてラップされた段落中の長いタグについて望まれない解析が行われるのを防ぐよう意図しています。)"
 
 #: ../../source/spec.rst:1970
 msgid "Some simple examples follow. Here are some basic HTML blocks of type 6:"
-msgstr ""
+msgstr "いくつかの簡単な例を下に示します。これはタイプ6のHTMLブロックです。"
 
 #: ../../source/spec.rst:2003
 msgid "A block can also start with a closing tag:"
-msgstr ""
+msgstr "ブロックは終止タグから始めることもできます。"
 
 #: ../../source/spec.rst:2013
 msgid "Here we have two HTML blocks with a Markdown paragraph between them:"
-msgstr ""
+msgstr "これは、2つのHTMLブロックと、それらに挟まれたMarkdown段落です。"
 
 #: ../../source/spec.rst:2027
 msgid ""
 "The tag on the first line can be partial, as long as it is split where "
 "there would be whitespace:"
-msgstr ""
+msgstr "最初の行のタグは、ホワイトスペースで分けるような感じと同様に一部だけ書くということができます。"
 
 #: ../../source/spec.rst:2050
 msgid "An open tag need not be closed:"
-msgstr ""
+msgstr "開始タグは閉じる必要はありません。"
 
 #: ../../source/spec.rst:2063
 msgid "A partial tag need not even be completed (garbage in, garbage out):"
-msgstr ""
+msgstr "途中まで書いたタグも、すべて書く必要はありません(「ゴミを入れれば、ゴミが出てくる」の原則です)。"
 
 #: ../../source/spec.rst:2081
 msgid ""
 "The initial tag doesn't even need to be a valid tag, as long as it starts"
 " like one:"
-msgstr ""
+msgstr "最初のタグは適正なタグである必要はなく、次のような形で始めることができます。"
 
 #: ../../source/spec.rst:2092
 msgid "In type 6 blocks, the initial tag need not be on a line by itself:"
-msgstr ""
+msgstr "タイプ6のブロックでは、最初のタグを1行に収める必要はありません。"
 
 #: ../../source/spec.rst:2110
 msgid ""
@@ -1189,18 +1189,18 @@ msgid ""
 "the HTML block. So, in the following example, what looks like a Markdown "
 "code block is actually part of the HTML block, which continues until a "
 "blank line or the end of the document is reached:"
-msgstr ""
+msgstr "空白行か文書の終わりが来るまでのすべてがHTMLブロックに含まれます。つまり、次の例では、Markdownコードブロックに見えるものは実際にはHTMLブロックの一部で、これは空白行か文書の終わりが来るまで続きます。"
 
 #: ../../source/spec.rst:2127
 msgid ""
 "To start an [HTML block] with a tag that is *not* in the list of block-"
 "level tags in (6), you must put the tag by itself on the first line (and "
 "it must be complete):"
-msgstr ""
+msgstr "タイプ6にあるブロックレベルタグ *ではない* タグで[HTMLブロック]を始めるには、 このタグを最初の行に置く必要があります(そしてそれは完全な形でなければなりません)。"
 
 #: ../../source/spec.rst:2141
 msgid "In type 7 blocks, the [tag name] can be anything:"
-msgstr ""
+msgstr "タイプ7のブロックでは、[タグ名]はなんでも許容されます。"
 
 #: ../../source/spec.rst:2171
 msgid ""
@@ -1209,21 +1209,21 @@ msgid ""
 "example. We can surround content with ``<del>`` tags in three different "
 "ways. In this case, we get a raw HTML block, because the ``<del>`` tag is"
 " on a line by itself:"
-msgstr ""
+msgstr "これらのルールはブロックレベルとインラインレベルのいずれにおいても機能するタグを使えるようにするために設計されています。``<del>`` タグはよい例です。3つの方法で、 ``<del>`` タグで内容を囲むことができます。下の例では、素のHTMLブロックを得られます。 ``<del>`` タグはそれ自身で1行となっているためです。"
 
 #: ../../source/spec.rst:2187
 msgid ""
 "In this case, we get a raw HTML block that just includes the ``<del>`` "
 "tag (because it ends with the following blank line). So the contents get "
 "interpreted as CommonMark:"
-msgstr ""
+msgstr "下の例では、 ``<del>`` と入っただけの素のHTMLブロックを得られます(HTMLブロックが次の空白行で終わっているためです)。そのため、内容はCommonMarkとして解釈されます。"
 
 #: ../../source/spec.rst:2203
 msgid ""
 "Finally, in this case, the ``<del>`` tags are interpreted as [raw HTML] "
 "*inside* the CommonMark paragraph. (Because the tag is not on a line by "
 "itself, we get inline HTML rather than an [HTML block].)"
-msgstr ""
+msgstr "最後に下の例では、 ``<del>`` タグはCommonMark段落の *中の* [素のHTML]として解釈されます。(なぜなら、タグはそれ自身で1行となっていないので、[HTMLブロック]ではなくインラインHTMLが出力されるためです。)"
 
 #: ../../source/spec.rst:2213
 msgid ""
@@ -1232,78 +1232,78 @@ msgid ""
 " somewhat differently. Instead of ending at the first blank line, these "
 "blocks end at the first line containing a corresponding end tag. As a "
 "result, these blocks can contain blank lines:"
-msgstr ""
+msgstr "HTMLタグはリテラルコンテンツ(``script``, ``style``, ``pre``)、コメント、処理命令、何かを処理するための宣言を含めるように設計されています。最初の空白行によるブロックの終わりの代わりに、次のブロックは関連する終止タグを含む行まで続きます。結果として、これらのブロックは空白行を含めることができます。"
 
 #: ../../source/spec.rst:2219
 msgid "A pre tag (type 1):"
-msgstr ""
+msgstr "preタグ (タイプ1):"
 
 #: ../../source/spec.rst:2239
 msgid "A script tag (type 1):"
-msgstr ""
+msgstr "scriptタグ (タイプ1):"
 
 #: ../../source/spec.rst:2257
 msgid "A style tag (type 1):"
-msgstr ""
+msgstr "styleタグ (タイプ1):"
 
 #: ../../source/spec.rst:2277
 msgid ""
 "If there is no matching end tag, the block will end at the end of the "
 "document (or the enclosing [block quote][block quotes] or [list "
 "item][list items]):"
-msgstr ""
+msgstr "合致する終止タグがない場合、ブロックは文書の終わり(あるいは[リスト項目]や[ブロッククォート])まで続きます。"
 
 #: ../../source/spec.rst:2318
 msgid "The end tag can occur on the same line as the start tag:"
-msgstr ""
+msgstr "終止タグは開始タグと同じ行においても構いません。"
 
 #: ../../source/spec.rst:2336
 msgid ""
 "Note that anything on the last line after the end tag will be included in"
 " the [HTML block]:"
-msgstr ""
+msgstr "最終行にある終止タグの後の文字列も[HTMLブロック]であることに注意してください。"
 
 #: ../../source/spec.rst:2349
 msgid "A comment (type 2):"
-msgstr ""
+msgstr "コメント (タイプ2):"
 
 #: ../../source/spec.rst:2365
 msgid "A processing instruction (type 3):"
-msgstr ""
+msgstr "処理命令 (タイプ3):"
 
 #: ../../source/spec.rst:2383
 msgid "A declaration (type 4):"
-msgstr ""
+msgstr "宣言 (タイプ4):"
 
 #: ../../source/spec.rst:2391
 msgid "CDATA (type 5):"
-msgstr ""
+msgstr "CDATA (タイプ5):"
 
 #: ../../source/spec.rst:2423
 msgid "The opening tag can be indented 1-3 spaces, but not 4:"
-msgstr ""
+msgstr "開始タグは1-3個のスペースでインデントできますが、4個ではできません。"
 
 #: ../../source/spec.rst:2445
 msgid ""
 "An HTML block of types 1--6 can interrupt a paragraph, and need not be "
 "preceded by a blank line."
-msgstr ""
+msgstr "タイプ1-6のHTMLブロックは段落を分割するので、ブロックの前に空白行を入れる必要はありません。"
 
 #: ../../source/spec.rst:2460
 msgid ""
 "However, a following blank line is needed, except at the end of a "
 "document, and except for blocks of types 1--5, [above][HTML block]:"
-msgstr ""
+msgstr "しかし、タイプ1-5の[HTMLブロック]以外では、文書の終わり以外ブロックの後に空白行を入れなければなりません。"
 
 #: ../../source/spec.rst:2475
 msgid "HTML blocks of type 7 cannot interrupt a paragraph:"
-msgstr ""
+msgstr "タイプ7のHTMLブロックは段落を分割できません。"
 
 #: ../../source/spec.rst:2487
 msgid ""
 "This rule differs from John Gruber's original Markdown syntax "
 "specification, which says:"
-msgstr ""
+msgstr "この規則はJohn GruberのオリジナルのMarkdown文法仕様とは異なり、元は次のように規定しています："
 
 #: ../../source/spec.rst:2490
 msgid ""
@@ -1311,31 +1311,31 @@ msgid ""
 "``<div>``, ``<table>``, ``<pre>``, ``<p>``, etc. — must be separated from"
 " surrounding content by blank lines, and the start and end tags of the "
 "block should not be indented with tabs or spaces."
-msgstr ""
+msgstr "唯一の制限は、ブロックレベルHTML要素 — 例えば ``<div>``, ``<table>``, ``<pre>``, ``<p>``, など — はタグに挟まれた内容とは空白行で離れていなければならず、ブロックの開始と終止タグはタブやスペースでインデントされるべきではない。"
 
 #: ../../source/spec.rst:2495
 msgid "In some ways Gruber's rule is more restrictive than the one given here:"
-msgstr ""
+msgstr "いくつかの点で、Gruberの規則はここで提案しているものより制限的です。"
 
 #: ../../source/spec.rst:2497
 msgid "It requires that an HTML block be preceded by a blank line."
-msgstr ""
+msgstr "HTMLブロックの前に空白行が必要。"
 
 #: ../../source/spec.rst:2498
 msgid "It does not allow the start tag to be indented."
-msgstr ""
+msgstr "開始タグがインデントされてはならない。"
 
 #: ../../source/spec.rst:2499
 msgid ""
 "It requires a matching end tag, which it also does not allow to be "
 "indented."
-msgstr ""
+msgstr "終止タグがマッチしている必要があり、これもインデントされてはならない。"
 
 #: ../../source/spec.rst:2502
 msgid ""
 "Most Markdown implementations (including some of Gruber's own) do not "
 "respect all of these restrictions."
-msgstr ""
+msgstr "ほとんどのMarkdown実装 (Gruberのものも含む) では、これらの制限は遵守されていません。"
 
 #: ../../source/spec.rst:2505
 msgid ""
@@ -1347,11 +1347,11 @@ msgid ""
 "is found. Second, it provides a very simple and flexible way of including"
 " Markdown content inside HTML tags: simply separate the Markdown from the"
 " HTML using blank lines:"
-msgstr ""
+msgstr "しかしながら、ここで提案しているものより寛容なGruberの規則で遵守されているものもあり、HTMLブロックの中に空白行を許容するというものです。ここでは2つの理由からそれを許容していません。第一に、危ういタグをパースする必要性を除くためで、これは高負荷となり、もし終止タグが見つからなかったときに文書の終わりから戻って処理する必要があるからです第二に、HTMLタグの中にMarkdownコンテンツを含める簡単で自由度の高い方法だからです。単純に空白行を使ってHTMLタグからMarkdownを離せばいいのです。"
 
 #: ../../source/spec.rst:2514
 msgid "Compare:"
-msgstr ""
+msgstr "下に比較を示します。"
 
 #: ../../source/spec.rst:2538
 msgid ""
@@ -1360,7 +1360,7 @@ msgid ""
 "``markdown=1``. The rule given above seems a simpler and more elegant way"
 " of achieving the same expressive power, which is also much simpler to "
 "parse."
-msgstr ""
+msgstr "いくつかのMarkdown実装では、開始タグに ``markdown=1`` という属性がある場合に、タグの中をMarkdownテキストとして解釈するという慣習を受け入れているものもあります。上で示した規則は、単純で同様の表現力を達成するよりエレガントな方法であり、パースも簡単になります。"
 
 #: ../../source/spec.rst:2544
 #, python-format
@@ -1369,14 +1369,14 @@ msgid ""
 "into Markdown documents with 100% reliability. However, *in most cases* "
 "this will work fine, because the blank lines in HTML are usually followed"
 " by HTML block tags. For example:"
-msgstr ""
+msgstr "欠点となりうるところは、100％の信頼度でMarkdown文書の中にHTMLブロックをペーストできないことです。しかし、 *ほとんどの場合では、* これはきちんと働きます。HTML中の空白行はたいていHTMLブロックのタグの後にあるためです。礼を示します。"
 
 #: ../../source/spec.rst:2571
 msgid ""
 "There are problems, however, if the inner tags are indented *and* "
 "separated by spaces, as then they will be interpreted as an indented code"
 " block:"
-msgstr ""
+msgstr "しかしながら問題はあり、中のタグがインデントされて、 *かつ* スペースで分けられている場合、これらをインデントされたコードブロックとして解釈してしまいます。"
 
 #: ../../source/spec.rst:2598
 msgid ""
@@ -1384,7 +1384,7 @@ msgid ""
 "The exception is inside ``<pre>`` tags, but as described [above][HTML "
 "blocks], raw HTML blocks starting with ``<pre>`` *can* contain blank "
 "lines."
-msgstr ""
+msgstr "幸運なことに、空白行は通常必要なく、削除可能です。``<pre>`` タグの中は例外ですが、[HTMLブロック]の項でも示したように、``<pre>`` から始まる素のHTMLブロックは空白行を含めることが *できます* 。"
 
 #: ../../source/spec.rst:2604
 msgid "Link reference definitions"
