@@ -1552,17 +1552,17 @@ msgstr "最後のスペースはインラインパースの前に削除される
 
 #: ../../source/spec.rst:2988
 msgid "Blank lines"
-msgstr ""
+msgstr "空白行"
 
 #: ../../source/spec.rst:2990
 msgid ""
 "[Blank lines] between block-level elements are ignored, except for the "
 "role they play in determining whether a [list] is [tight] or [loose]."
-msgstr ""
+msgstr "ブロックレベル要素の間の[空白行]は無視されますが、例外的に[リスト]が[タイト]か[ルーズ]かを決定する役目を担うことがあります。"
 
 #: ../../source/spec.rst:2993
 msgid "Blank lines at the beginning and end of the document are also ignored."
-msgstr ""
+msgstr "文書の最初と最後の空白行は無視されます。"
 
 #: ../../source/spec.rst:3010
 msgid "Container blocks"
