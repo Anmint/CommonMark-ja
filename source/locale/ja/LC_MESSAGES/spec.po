@@ -1503,7 +1503,7 @@ msgstr "[リンク参照定義]はリストやブロッククォートのよう�
 
 #: ../../source/spec.rst:2887
 msgid "Paragraphs"
-msgstr ""
+msgstr "段落"
 
 #: ../../source/spec.rst:2889
 msgid ""
@@ -1512,41 +1512,43 @@ msgid ""
 "the result of parsing the paragraph's raw content as inlines. The "
 "paragraph's raw content is formed by concatenating the lines and removing"
 " initial and final [whitespace]."
-msgstr ""
+msgstr "どの種類のブロックにも解釈されない非空白行が連続した行は `段落 <@>`__ を形成します。"
+"段落の内容は、段落のそのままの内容をインライン要素として解釈した結果です。"
+"段落のそのままの内容は、最初と最後の[ホワイトスペース]を削除し、各行を連結したものです。"
 
 #: ../../source/spec.rst:2895
 msgid "A simple example with two paragraphs:"
-msgstr ""
+msgstr "2つの段落を持つ簡単な例を示します。"
 
 #: ../../source/spec.rst:2906
 msgid "Paragraphs can contain multiple lines, but no blank lines:"
-msgstr ""
+msgstr "段落は複数行にわたって書けますが、空白行は入れられません。"
 
 #: ../../source/spec.rst:2921
 msgid "Multiple blank lines between paragraph have no effect:"
-msgstr ""
+msgstr "段落の間の複数の空白行は、特に何も効果はありません。"
 
 #: ../../source/spec.rst:2933
 msgid "Leading spaces are skipped:"
-msgstr ""
+msgstr "初めのスペースは無視されます。"
 
 #: ../../source/spec.rst:2943
 msgid ""
 "Lines after the first may be indented any amount, since indented code "
 "blocks cannot interrupt paragraphs."
-msgstr ""
+msgstr "インデントされたコードブロックは段落を分割しないため、段落の2行目以降はいくらでもインデントできます。"
 
 #: ../../source/spec.rst:2956
 msgid ""
 "However, the first line may be indented at most three spaces, or an "
 "indented code block will be triggered:"
-msgstr ""
+msgstr "しかしながら、最初の行はスペース3つまでしかインデントできません。さもないと、インデントされたコードブロックになってしまいます。"
 
 #: ../../source/spec.rst:2976
 msgid ""
 "Final spaces are stripped before inline parsing, so a paragraph that ends"
 " with two or more spaces will not end with a [hard line break]:"
-msgstr ""
+msgstr "最後のスペースはインラインパースの前に削除されるため、2個以上のスペースがある行でも[強制改行]はされません。"
 
 #: ../../source/spec.rst:2988
 msgid "Blank lines"
@@ -4622,4 +4624,3 @@ msgid ""
 "After we're done, we remove all delimiters above ``stack_bottom`` from "
 "the delimiter stack."
 msgstr ""
-
