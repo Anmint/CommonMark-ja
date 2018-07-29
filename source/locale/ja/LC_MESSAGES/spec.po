@@ -1566,26 +1566,29 @@ msgstr "文書の最初と最後の空白行は無視されます。"
 
 #: ../../source/spec.rst:3010
 msgid "Container blocks"
-msgstr ""
+msgstr "コンテナブロック"
 
 #: ../../source/spec.rst:3012
 msgid ""
 "A [container block] is a block that has other blocks as its contents. "
 "There are two basic kinds of container blocks: [block quotes] and [list "
 "items]. [Lists] are meta-containers for [list items]."
-msgstr ""
+msgstr "[コンテナブロック]は自らの中に他のブロックを持つブロックのことです。"
+"2つの基本的なコンテナブロックがあり、これは[ブロッククォート]と[リスト項目]です。"
+"[リスト]は[リスト項目]のためのメタコンテナです。"
 
 #: ../../source/spec.rst:3016
 msgid ""
 "We define the syntax for container blocks recursively. The general form "
 "of the definition is:"
-msgstr ""
+msgstr "コンテナブロックの文法は再帰的に定義されています。"
+"一般的な定義は次の通りです。"
 
 #: ../../source/spec.rst:3019
 msgid ""
 "If X is a sequence of blocks, then the result of transforming X in such-"
 "and-such a way is a container of type Y with these blocks as its content."
-msgstr ""
+msgstr "Xがブロックの連続ならば、何らかの方法でXを変換した結果は、それを中身とするYのコンテナとなる。"
 
 #: ../../source/spec.rst:3023
 msgid ""
@@ -1594,7 +1597,9 @@ msgid ""
 "define the syntax, although it does not give a recipe for *parsing* these"
 " constructions. (A recipe is provided below in the section entitled `A "
 "parsing strategy <#appendix-a-parsing-strategy>`__.)"
-msgstr ""
+msgstr "つまり、何をブロッククォートやリスト項目にカウントするかは、それらがどのようにしてそれらの内容から *生成されるか* を説明することによって示しているのです。"
+"これは文法を定義するには十分なはずですが、それらの構造を *パースする* やり方については示されません。"
+"(`パース戦略 <#appendix-a-parsing-strategy>`__という章でこのレシピについて記しています。)"
 
 #: ../../source/spec.rst:3030
 msgid "Block quotes"
